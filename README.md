@@ -5,7 +5,7 @@ The other user is the user login - who can view the book as well as the ratings 
 
 
 
-
+------------------------------------------------------------------------------------------------------------
 Technology Stack:
 
 Front-end: HTML, CSS, JavaScript, jQuery
@@ -16,14 +16,12 @@ Database: MySQL
 
 Runtime: Node.js
 
-
+------------------------------------------------------------------------------------------------------------
 Software Used: Heroku, Visual Studio Code
 
 Frameworks: Sequelize, jQuery
 
-
-
-
+------------------------------------------------------------------------------------------------------------
 Deployment instructions:
 
 - Run database script (CREATE_TABLE_Script.sql)
