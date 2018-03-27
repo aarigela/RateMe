@@ -1,0 +1,198 @@
+// Coming soon
+.coming-soon {
+	background-image: url('../images/coming-soonbg.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	color:#484f52;
+	font:400 16px/1.25 $second-font-family;
+
+	@media (min-width: 1200px) {
+		font-size: 17px;
+	}
+
+	@media (min-width: 1600px) {
+		font-size: 19px;
+	}
+
+	.soon-content {
+		padding-top: 50%;
+
+		@media (min-width: 768px) {
+			padding-top: 72%;
+			padding-left:0;
+		}
+
+		@media (min-width: 992px) {
+			padding-top: 50%;
+			padding-left:45px;
+		}
+	
+		@media (min-width: 1440px) {
+			padding-left:80px;
+		}
+
+		@media (min-width: 1600px) {
+			padding-left:100px;
+		}
+	}
+
+	h1 {
+		color: #fff;
+		font:700 42px/0.9 $third-font-family;
+		text-shadow: 0 4px 1px rgba(0,0,0, 0.05);
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		margin-bottom:20px;
+
+		@media (min-width: 768px) {
+			font-size: 42px;
+			margin-bottom:16px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 72px;
+			margin-bottom:18px;
+		}
+
+		@media (min-width: 1440px) {
+			font-size: 88px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size: 110px;
+			margin-bottom:21px;
+		}
+	}
+
+	p {
+		max-width: 420px;
+		margin-bottom:28px;
+		letter-spacing: 0.05em;
+
+		@media (min-width: 768px) {
+			margin-bottom:24px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 17px;
+			margin-bottom:28px;
+		}
+
+		@media (min-width: 1600px) {
+			max-width: 480px;
+			margin-bottom:38px;
+		}
+	}
+
+	.coming-countdown{
+		max-width: 420px;
+
+		@media (min-width: 1200px) {
+			max-width: 480px;
+		}
+
+		@media (min-width: 1600px) {
+			max-width: 580px;
+		}
+	}
+
+	.countdown-rtl {
+		direction: rtl;
+	}
+
+	.countdown-row {
+		clear: both;
+		width: 100%;
+		padding: 0px;
+	}
+	.countdown-show1 .countdown-section {
+		width: 98%;
+	}
+
+	.countdown-show2 .countdown-section {
+		width: 48%;
+	}
+
+	.countdown-show3 .countdown-section {
+		width: 32.5%;
+	}
+
+	.countdown-show4 .countdown-section {
+		width: 24.5%;
+	}
+
+	.countdown-show5 .countdown-section {
+		width: 19.5%;
+	}
+
+	.countdown-show6 .countdown-section {
+		width: 16.25%;
+	}
+
+	.countdown-show7 .countdown-section {
+		width: 14%;
+	}
+
+	.countdown-section {
+		display: block;
+		float: left;
+		font-family: $third-font-family;
+		color:#044657;
+	}
+
+	.countdown-amount {
+	    font-size: 36px;
+	    line-height:1;
+
+	    @media (min-width: 768px) {
+	   		font-size: 48px;
+		}
+
+	    @media (min-width: 1200px) {
+			font-size: 60px;
+		}
+
+	    @media (min-width: 1440px) {
+			font-size: 72px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size: 80px;
+		}
+	}
+
+	.countdown-period {
+	    display: block;
+		font-weight:500;
+		font-size:14px;
+		text-transform: uppercase;
+		line-height:1.1;
+		margin-top:6px;
+
+		@media (min-width: 992px) {
+			font-size:15px;
+		}
+
+		@media (min-width: 1200px) {
+			padding-left:4px;
+		}
+
+		@media (min-width: 1440px) {
+			font-size:16px;
+			margin-top:10px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size:17px;
+			padding-left:12px;
+		}
+	}
+
+	.countdown-descr {
+		display: block;
+		width: 100%;
+	}
+
+}

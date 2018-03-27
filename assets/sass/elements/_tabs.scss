@@ -1,0 +1,796 @@
+/* Elements Tabs */
+.nav {
+	&.nav-tabs {
+	margin-bottom:30px;
+	border-bottom: 1px solid #ececec;
+	font-size:0;
+
+	@media (min-width: 768px) {
+		margin-bottom:45px;
+	}
+	
+	@media (min-width: 992px) {
+		margin-bottom: 55px;
+	}
+
+		> li {
+			float:none;
+			display:inline-block;
+
+			+ li {
+				margin-left:2px;
+
+				@media (min-width: 768px) {
+					margin-left:6px;
+				}
+
+				@media (min-width: 992px) {
+					margin-left:8px;
+				}
+
+				@media (min-width: 1200px) {
+					margin-left:10px;
+				}
+			}
+
+			> a  {
+				padding:11px 6px 8px;
+				font:600 12px/1.5 $second-font-family;
+				color:#c9c9c9;
+				letter-spacing: 0.07em;
+				transition: background 0.35s;
+				border-color: #ececec;
+				border-radius: 10px 10px 0 0;
+				margin:0;
+
+				@media (min-width: 768px) {
+					padding:12px 18px 9px;
+					font-size:13px;
+				}
+
+				@media (min-width: 992px) {
+					padding:14px 22px 11px;
+					font-size:15px;
+				}
+
+				@media (min-width: 1200px) {
+					padding:17px 30px 13px;
+					font-size:16px;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: #fff;
+					color:#666666;
+					border-color: #ececec;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: #fff;
+					color:#666666;
+					border-color: #ececec;
+				}
+			}
+		}
+	}
+}
+
+.nav {
+	&.nav-tabs.v2 {
+		max-width:650px;
+		margin:0 auto 30px;
+		border-bottom: 1px solid #f4f4f4;
+
+		> li {
+			float:none;
+			display:inline-block;
+			margin-left:5px;
+			margin-right:5px;
+			
+			@media (min-width: 480px) {
+				margin-left:10px;
+				margin-right:10px;
+			}
+
+			@media (min-width: 768px) {
+				margin-left:15px;
+				margin-right:15px;
+			}
+
+			@media (min-width: 992px) {
+				margin-left:30px;
+				margin-right:30px;
+			}
+
+			@media (min-width: 1200px) {
+				margin-left:50px;
+				margin-right:50px;
+			}
+
+			+ li {
+				margin-left:0;
+			}
+
+			> a  {
+				padding:8px 8px 5px;
+				font:400 12px/1.5 $third-font-family;
+				color:#c3c3c3;
+				letter-spacing: 0.1m;
+				border-color: transparent;
+				border-radius: 8px 8px 0 0;
+				margin:0;
+
+				@media (min-width: 480px) {
+					font-size:13px;
+					padding:8px 14px 5px;
+				}
+
+				@media (min-width: 768px) {
+					padding:8px 20px 5px;
+				}
+
+
+				@media (min-width: 768px) {
+					padding:8px 20px 5px;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: $first-color;
+					border-color: #f4f4f4;
+					border-bottom-color: #fff;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;
+					color: $first-color;
+					border-color: #f4f4f4;
+					border-bottom-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+// Index3 - Index5 Nav Tabs Icons
+.nav {
+	&.nav-icons.nav-justified {
+		margin-bottom:30px;
+		max-width: 1210px;
+		margin-left:auto;
+		margin-right: auto;
+		font-size:0;
+
+		@media (min-width: 768px) {
+			display:table;
+			margin-bottom:35px;
+		}
+
+		@media (min-width: 992px) {
+			margin-bottom:45px;
+		}
+
+		@media (min-width:1600px) {
+			margin-bottom:55px;
+		}
+
+		> li {
+			border:none;
+			position: relative;
+			font-size:15px;
+			line-height:1;
+
+			@media (min-width: 768px) {
+				width: auto;
+			}
+
+			@media (max-width: 767px) {
+				display: inline-block;
+			}
+			
+			&:first-child:before,
+			&:after {
+				content:'';
+				display:block;
+				position: absolute;
+				top:50%;
+				right: -1px;
+				width: 2px;
+				height:30px;
+				margin-top:-15px;
+				background-color: #e9e9e9;
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0) 100%);
+				opacity:0.15;
+			}
+
+			&:first-child:before {
+				right: auto;
+				left:-1px;
+			}
+
+			+ li {
+				margin-left:0;
+			}
+
+			> a  {
+				padding:0 5px;
+				border:none;
+				border-radius: 0;
+				margin:0;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					border-color: transparent;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+
+.nav-icons-container {
+	background-color: #f2f2f2;
+	overflow:hidden;
+	margin-bottom:35px;
+
+	@media (min-width: 768px) {
+		margin-bottom: 50px;
+	}
+
+	@media (min-width: 992px) {
+		margin-bottom: 60px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom: 70px;
+	}
+
+	@media (min-width: 1600px) {
+		margin-bottom: 80px;
+	}
+
+
+	.nav {
+		&.nav-icons.nav-justified {
+			margin-bottom:0;
+
+			> li {
+				
+				&:first-child:before,
+				&:after {
+					background-color: #e9e9e9;
+					background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 50%,rgba(0,0,0,0) 100%);
+					opacity:0.15;
+				}
+				> a  {
+					padding:2.5px 2px 5.5px;
+					border:none;
+					border-radius: 0;
+					margin:0;
+					border-top: 3px solid transparent;
+
+					@media (min-width: 480px) {
+						
+					}
+
+					@media (min-width: 768px) {
+						padding-top: 8.5px;
+						padding-bottom: 11.5;
+					}
+
+					&:hover,
+					&:focus {
+						background-color: transparent;
+						border-color: transparent;
+					}
+				}
+
+				&.active {
+					> a {
+						background-color: #fff;
+						border-top-color: $first-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tab-icon {
+	display:inline-block;
+	width:55px;
+	height:55px;
+
+	&.icon-camera {
+		@include sprite-position($tab-icon-camera);
+
+		li.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-camera-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-camera2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-camera2-custom);
+			}
+		}
+	}
+
+	&.icon-monitor {
+		@include sprite-position($tab-icon-monitor);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-monitor-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-monitor2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-monitor2-custom);
+			}
+		}
+	}
+
+	&.icon-phone {
+		@include sprite-position($tab-icon-phone);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-phone-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-phone2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-phone2-custom);
+			}
+		}
+	}
+
+	&.icon-headphone {
+		@include sprite-position($tab-icon-headphone);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-headphone-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-headphone2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-headphone2-custom);
+			}
+		}
+	}
+
+	&.icon-speaker {
+		@include sprite-position($tab-icon-speaker);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-speaker-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-speaker2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-speaker2-custom);
+			}
+		}
+	}
+
+	&.icon-owen {
+		@include sprite-position($tab-icon-owen);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-owen-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-owen2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-owen2-custom);
+			}
+		}
+	}
+
+	&.icon-forma {
+		@include sprite-position($tab-icon-forma);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-forma-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-forma2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-forma2-custom);
+			}
+		}
+	}
+
+	&.icon-projector {
+		@include sprite-position($tab-icon-projector);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-projector-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-projector2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-projector2-custom);
+			}
+		}
+	}
+
+	&.icon-fridge {
+		@include sprite-position($tab-icon-fridge);
+
+		.active &,
+		li:hover & {
+			@include sprite-position($tab-icon-fridge-custom);
+		}
+
+		&.icon2 {
+			@include sprite-position($tab-icon-fridge2);
+
+			li.active &,
+			li:hover & {
+				@include sprite-position($tab-icon-fridge2-custom);
+			}
+		}
+	}
+}
+
+
+/* Nav Pills */
+.nav {
+	&.nav-pills {
+	margin-bottom:30px;
+
+	@media (min-width: 768px) {
+		margin-bottom:45px;
+	}
+	
+	@media (min-width: 992px) {
+		margin-bottom: 55px;
+	}
+
+		> li {
+			+ li {
+				margin-left:2px;
+			}
+
+			> a  {
+				position: relative;
+				padding:12px 6px 9px;
+				font:600 12px/1.5 $second-font-family;
+				color:#b1b1b1;
+				background-color: #ececec;
+				letter-spacing: 0.07em;
+				transition: background 0.35s;
+				border: none;
+				border-radius: 0;
+				margin:0;
+
+				@media (min-width: 768px) {
+					padding:14px 10px 11px;
+					font-size:13px;
+				}
+
+				@media (min-width: 992px) {
+					padding:17px 12px 14px;
+					font-size:14px;
+				}
+
+				@media (min-width: 1600px) {
+					padding:20px 20px 16px;
+					font-size:16px;
+				}
+
+				&:after {
+					content:'';
+					display:none;
+					position: absolute;
+					bottom:0;
+					left:50%;
+					margin-left:-6px;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 6px 10px 6px;
+					border-color: transparent transparent #ececec transparent;
+
+					@media (min-width: 768px) {
+						border-bottom-color: #fff;
+					}
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $first-color;
+					color:#fff;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: $first-color;
+					color:#fff;
+
+					&:after {
+						display: block;
+					}
+				}
+			}
+		}
+
+
+		&.nav-justified {
+			> li {
+				+ li {
+					@media (min-width: 768px) {
+						padding-left:2px;
+					}
+
+					@media (min-width: 992px) {
+						padding-left:3px;
+					}
+
+					@media (min-width: 1200px) {
+						padding-left:4px;
+					}
+
+					@media (min-width: 1600px) {
+						padding-left:6px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Nav Pills Bordered */
+.nav {
+	&.nav-pills.nav-bordered {
+		margin-bottom:22px;
+		font-size:0;
+
+		@media (min-width: 992px) {
+			margin-bottom: 40px;
+		}
+
+		> li {
+			float:none;
+			display:inline-block;
+			margin:0 5px;
+
+			@media (min-width: 768px) {
+				margin:0 10px;
+			}
+
+			@media (min-width: 992px) {
+				margin:0 15px;
+			}
+
+			@media (min-width: 1200px) {
+				margin:0 23px;
+			}
+
+			+ li {
+				margin-left:0;
+			}
+
+			> a  {
+				position: relative;
+				padding:6px 14.5px 4px;
+				font:700 15px/1.5 $second-font-family;
+				color:#9d9c9c;
+				background-color: transparent;
+				letter-spacing: 0.05em;
+				transition: background 0.35s;
+				border: 2px solid transparent;
+				text-trnsform: uppercase;
+				border-radius: 18px;
+				margin:0;
+
+				@media (min-width: 992px) {
+					font-size:16px;
+					padding:7px 23px 5px;
+				}
+
+				&:after {
+					display:none;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: transparent;;
+					border-color: $first-color;
+					color: $first-color;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;;
+					border-color: $first-color;
+					color: $first-color;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.simple-tabs {
+			margin-bottom:22px;
+
+			@media (min-width: 992px) {
+				margin-bottom: 35px;
+			}
+			
+			> li {
+				> a {
+					color:#9d9c9c;
+
+					&:hover,
+					&:focus {
+						background-color: #eaeaea;
+						border-color: #eaeaea;
+						color: #555555;
+					}
+				}
+				&.active {
+					> a {
+						background-color: #eaeaea;
+						border-color: #eaeaea;
+						color: #555555;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav {
+	&.nav-pills.nav-bordered.v2{
+		font-size:0;
+
+		> li {
+			margin:0 6px;
+
+			@media (min-width: 768px) {
+				margin:0 12px;
+			}
+
+			@media (min-width: 992px) {
+				margin:0 17px;
+			}
+
+			@media (min-width: 1200px) {
+				margin:0 25px;
+			}
+
+			> a  {
+				padding:6px 14.5px 4px;
+				font:400 16px/1.5 $third-font-family;
+				color:#bcbcbc;
+				font-style:italic;
+				text-transform: capitalize;
+
+				@media (min-width: 992px) {
+					font-size:17px;
+					padding:6.5px 26px 4.5px;
+				}
+
+				&:after {
+					display:none;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: transparent;;
+					border-color: $first-color;
+					color: $first-color;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;;
+					border-color: $first-color;
+					color: $first-color;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tab-content {
+	font-size: 16px;
+	line-height: 1.65;
+
+	@media (min-width: 768px) {
+		font-size:17px;
+	}
+
+	p {
+		margin-bottom:20px;
+
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	ul {
+		list-style: disc;
+		padding-left:16px;
+
+		li {
+			margin-bottom: 7px;
+		}
+	}
+}
+
+// Simple Fix for crousel inside the tab otherwise carousel need js fix
+.tab-carousel-container {
+	.tab-content {
+		>.tab-pane {
+			display:block;
+			height:0;
+			overflow:hidden;
+
+			&.active {
+				display:block;
+				height:auto;
+				overflow:visible;
+			}
+		}
+	}
+
+	.carousel-overflow-container.top-align {
+		padding-top:25px;
+		margin-top:-25px;
+	}
+}

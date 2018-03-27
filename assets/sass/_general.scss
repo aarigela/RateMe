@@ -1,0 +1,261 @@
+body {
+	color: $site-text-color;
+	font: 400 15px/1.6 $font-family;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+}
+
+.container-fluid {
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@media (min-width: 992px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	&.max {
+		max-width: 1380px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.row {
+		@media (min-width: 1200px) {
+			margin-left: -20px;
+			margin-right: -20px;
+
+			[class*="col-"],
+			.col-5 {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+		&.row-lg {
+			@media (min-width: 1600px) {
+				margin-left: -25px;
+				margin-right: -25px;
+
+				[class*="col-"] {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+			}
+		}
+
+		&.row-sm {
+			@media (min-width: 1200px) {
+				margin-left: -15px;
+				margin-right: -15px;
+
+				[class*="col-"] {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+		}
+		
+		// fullwidth row
+		&.fullwidth {
+			margin:0;
+
+			[class*="col-"] {
+				padding:0;
+			}
+		}
+	}
+
+	
+	// fullwidth container
+	&.fullwidth {
+		padding:0;
+
+		.row {
+			margin:0;
+		}
+
+		[class*="col-"] {
+			padding:0;
+		}
+	}
+}
+
+// 5 column
+.col-xlg-5 {
+	@media (min-width: 1600px) {
+		width: 20%;
+	}
+}
+
+/* Custom grid for 5 columns */
+.col-5 {
+	position: relative;
+	@media (min-width: 992px) {
+		float:left;
+		width: 20%;
+	}
+}
+
+.visible-xlg {
+	display:none;
+
+	@media (min-width: 1600px) {
+		display:block;
+	}
+}
+
+.container {
+	@media (min-width: 1280px) {
+		width: 1230px;
+	}
+}
+
+#wrapper {
+	background-color: #fff;
+	// Make container fluid max 1920px
+	&.boxed {
+		.container-fluid {
+			@media (min-width: 1920px) {
+				max-width:1920px;
+				margin-left:  auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+::selection {
+    background-color: $first-color;
+    color: #fff;
+}
+
+ul,
+ol {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+
+a,
+select,
+input,
+textarea,
+button {
+	&:focus,
+	&:active {
+		outline: none !important;
+	}
+}
+
+iframe {
+	border: none;
+	outline: none;
+}
+
+.col-xss-12 {
+	@media (max-width: 480px) { 
+		width:100%;
+		float:none;
+	}
+}
+
+
+.visible-xss {
+	display:none;
+
+	@media (max-width: 480px) {
+		display:block;
+	}
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-underline {
+	text-decoration:underline;
+}
+
+.bg-image,
+.parallax {
+	position: relative;
+	background-size:cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.parallax {
+	background-attachment: fixed;
+}
+
+.overlay-container {
+	position: relative;
+	
+	> .container,
+	> .container-fluid {
+		position: relative;
+		z-index:1;
+	}
+
+	.overlay {
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		opacity: 0.4;
+		background-color: #000;
+		z-index:0;
+
+		&.custom {
+			background-color: $first-color;
+		}
+
+		&.custom2 {
+			background-color: $second-color;
+		}
+
+		&.light {
+			background-color: #fff;
+		}
+	}
+}
+
+.carousel-overflow-container {
+	overflow:hidden;
+
+	&.row {
+		margin-left:-18px;
+		margin-right:-18px;
+
+		@media (min-width: 1200px) {
+			margin-left:-25px;
+			margin-right:-25px;
+		}
+
+		[class*="col-"] {
+			padding-left:18px;
+			padding-right:18px;
+			
+			@media (min-width: 1200px) {
+				padding-left:25px;
+				padding-right:25px;
+			}
+		}
+	}
+
+	.swiper-container,
+	.swiper-wrapper {
+		overflow: visible !important;
+	}
+}

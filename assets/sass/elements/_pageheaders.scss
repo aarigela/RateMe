@@ -1,0 +1,198 @@
+/* Page Header */
+.page-header {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border:none;
+
+	h1 {
+		font-family: $second-font-family;
+		font-size: 18px;
+		line-height:20px;
+		font-weight: 600;
+		color: #777;
+		text-transform: uppercase;
+		margin: 15px 0 0;
+
+		@media (min-width: 768px) {
+			margin:16px 0 12px;
+			float:left;
+		}
+
+		& + .breadcrumb {
+			@media (min-width: 768px) {
+				float:right;
+			}
+		}
+	}
+
+	&.larger {
+		padding: 6px 0;
+	}
+
+	&.largest {
+		padding: 41px 0 40px;
+		margin-bottom: 70px;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 80px;
+		}
+
+		@media (min-width: 1600px) {
+			margin-bottom: 90px;
+		}
+
+		h1 {
+			float: none;
+			font:700 45px/1 $third-font-family;
+			margin:0 0 12px;
+
+			+ .breadcrumb {
+				float: none;
+			}
+		}
+
+		.breadcrumb {
+			font-size:12px;
+			padding:0;
+			text-transform:uppercase;
+		}
+	}
+
+	&.text-center:not(.largest) {
+		@media (min-width: 768px) {
+			h1 {
+				float:none;
+				margin:10px 0 0;
+
+				+ .breadcrumb {
+					float:none;
+					padding-bottom:5px;
+				}
+			}
+		}
+	}
+
+	&.text-right:not(.largest) {
+		@media (min-width: 768px) {
+			h1 {
+				float: right;
+
+				& + .breadcrumb {
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+
+/* Breadcrumb */
+.breadcrumb {
+	padding:10px 0;
+	margin:0;
+	background-color: transparent;
+	border-radius:0;
+	letter-spacing: 0.7px;
+	font: 500 13px/17px $second-font-family;
+
+	@media (min-width: 768px) {
+		padding:15.5px 0;
+	}
+		
+	li {
+		a {
+			color: #777777;
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+	}
+
+	> .active {
+		color: #b0afaf;
+	}
+
+	li + li {
+		&:before {
+			content: '';
+			display:inline-block;
+			width:12px;
+			height:9px;
+			background-image: url('../images/breadcrumb-arrow.png');
+			margin: 0 15px 0 10px;
+			vertical-align: middle;
+
+			@media (min-width: 768px) {
+				margin: 0 29px 0 25px;
+			}
+		}
+	}
+}
+
+/* Custom Page Header */
+.page-header.custom {
+	background-color: $second-color;
+
+	h1 {
+		color: #fff;
+	}
+
+	.breadcrumb {
+
+		li {
+			a {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: lighten($second-color, 20%);
+				}
+			}
+		}
+
+		> .active {
+			color: #fff;
+		}
+
+		li + li {
+			&:before {
+				background-position: 0 -9px;
+			}
+		}
+	}
+}
+
+/* Page Header Parallax - Background Image */
+.page-header.parallax,
+.page-header.bg-image {
+	position: relative;
+
+	&:after {
+		content:'';
+		position: absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		background-color: rgba(0,0,0, 0.15);
+		z-index:1;
+	}
+
+	.container-fluid,
+	.container {
+		position: relative;
+		z-index:2;
+	}
+
+	.breadcrumb {
+		li {
+			a:hover,
+			a:focus {
+				color: $first-color;
+			}
+		}
+	}
+}

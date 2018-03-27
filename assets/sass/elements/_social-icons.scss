@@ -1,0 +1,382 @@
+/* Social icons */
+.social-icons {
+	font-size:0;
+	margin-left:-6px;
+	margin-right:-6px;
+	
+	.social-icon {
+		display: inline-block;
+		width:40px;
+		height:40px;
+		border-radius:5px;
+		margin:0 4px 8px;
+		transition: background-color 0.4s, border 0.4s;
+		background-color: #e3e3e3;
+		
+
+		@media (min-width: 992px) {
+			margin: 0 6px 12px;
+		}
+
+		&.share {
+			@include sprite-position($social-share);
+			background-color: #dcdcdc;
+
+			&:hover,
+			&:focus {
+				background-color: #b8b8b8;
+			}
+		}
+
+		&.facebook {
+			@include sprite-position($facebook);
+
+			&:hover,
+			&:focus {
+				background-color: #3f83c3 !important;
+				border-color: #3f83c3 !important;
+			}
+		}
+
+		&.twitter {
+			@include sprite-position($twitter);
+
+			&:hover,
+			&:focus {
+				background-color: #27c0c8 !important;
+				border-color: #27c0c8 !important;
+			}
+		}
+
+		&.googleplus {
+			@include sprite-position($googleplus);
+
+			&:hover,
+			&:focus {
+				background-color: #cb3e2d !important;
+				border-color: #cb3e2d !important;
+			}
+		}
+
+		&.linkedin {
+			@include sprite-position($linkedin);
+
+			&:hover,
+			&:focus {
+				background-color: #4975b6 !important;
+				border-color: #4975b6 !important;
+			}
+		}
+
+		&.pinterest {
+			@include sprite-position($pinterest);
+
+			&:hover,
+			&:focus {
+				background-color: #de2f2f !important;
+				border-color: #de2f2f !important;
+			}
+		}
+
+		&.instagram {
+			@include sprite-position($instagram);
+
+			&:hover,
+			&:focus {
+				background-color: #937f65 !important;
+				border-color: #937f65 !important;
+			}
+		}
+
+		&.flickr {
+			@include sprite-position($flickr);
+
+			&:hover,
+			&:focus {
+				background-color: #cd4084 !important;
+				border-color: #cd4084 !important;
+			}
+		}
+
+		&.skype {
+			@include sprite-position($skype);
+
+			&:hover,
+			&:focus {
+				background-color: #42b2d2  !important;
+				border-color: #42b2d2  !important;
+			}
+		}
+
+		&.email {
+			@include sprite-position($email);
+
+			&:hover,
+			&:focus {
+				background-color: #8f6540  !important;
+				border-color: #8f6540  !important;
+			}
+		}
+	}
+
+	// Smaller Icons
+	&.smaller {
+		margin-left:-3px;
+		margin-right:-3px;
+		.social-icon {
+			width: 32px;
+			height:32px;
+			margin: 0 3px 6px;
+
+			&.facebook {
+				@include sprite-position($facebook-sm);
+			}
+
+			&.twitter {
+				@include sprite-position($twitter-sm);
+			}
+
+			&.pinterest {
+				@include sprite-position($pinterest-sm);
+			}
+
+			&.instagram {
+				@include sprite-position($instagram-sm);
+			}
+
+			&.flickr {
+				@include sprite-position($flickr-sm);
+			}
+
+			&.skype {
+				@include sprite-position($skype-sm);
+			}
+
+			&.email {
+				@include sprite-position($email-sm);
+			}
+		}
+
+		&.bordered {
+			.social-icon {
+				border: 2px solid #fff;
+				background-color: transparent;
+
+				&.facebook {
+					@include sprite-position($facebook-sm-border);
+				}
+
+				&.twitter {
+					@include sprite-position($twitter-sm-border);
+				}
+
+				&.pinterest {
+					@include sprite-position($pinterest-sm-border);
+				}
+
+				&.instagram {
+					@include sprite-position($instagram-sm-border);
+				}
+
+				&.flickr {
+					@include sprite-position($flickr-sm-border);
+				}
+
+				&.skype {
+					@include sprite-position($skype-sm-border);
+				}
+
+				&.email {
+					@include sprite-position($email-sm-border);
+				}
+			}
+		}
+	}
+}
+
+/* Social icons */
+.social-icons.colored {
+	
+	.social-icon {
+		transition: all 0.4s;
+
+		&:hover,
+		&:focus {
+			border-radius:0;
+		}
+
+		&.facebook {
+			background-color: #3f83c3 !important;
+		}
+
+		&.twitter {
+			background-color: #27c0c8 !important;
+		}
+
+		&.googleplus {
+			background-color: #cb3e2d !important;
+		}
+
+		&.linkedin {
+			background-color: #4975b6 !important;
+		}
+
+		&.pinterest {
+			background-color: #de2f2f !important;
+		}
+
+		&.instagram {
+			background-color: #937f65 !important;
+		}
+
+		&.flickr {
+			background-color: #cd4084 !important;
+		}
+
+		&.skype {
+			background-color: #42b2d2 !important;
+		}
+
+		&.email {
+			background-color: #8f6540 !important;
+		}
+	}
+}
+
+&.transparent {
+	.social-icon  {
+		background-color: transparent;
+
+		&.facebook {
+			@include sprite-position($facebook-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #3f83c3;
+				@include sprite-position($facebook);
+			}
+		}
+
+		&.twitter {
+			@include sprite-position($twitter-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #27c0c8;
+				@include sprite-position($twitter);
+			}
+		}
+
+		&.googleplus {
+			@include sprite-position($googleplus-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #cb3e2d;
+				@include sprite-position($googleplus);
+			}
+		}
+
+		&.linkedin {
+			@include sprite-position($linkedin-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #4975b6;
+				@include sprite-position($linkedin);
+			}
+		}
+
+		&.pinterest {
+			@include sprite-position($pinterest-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #de2f2f;
+				@include sprite-position($pinterest);
+			}
+		}
+
+		&.instagram {
+			@include sprite-position($instagram-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #937f65;
+				@include sprite-position($instagram);
+			}
+		}
+
+		&.flickr {
+			@include sprite-position($flickr-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #cd4084;
+				@include sprite-position($flickr);
+			}
+		}
+
+		&.skype {
+			@include sprite-position($skype-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #42b2d2;
+			@include sprite-position($skype);
+			}
+		}
+
+		&.email {
+			@include sprite-position($email-gray);
+
+			&:hover,
+			&:focus {
+				background-color: #8f6540;
+				@include sprite-position($email);
+			}
+		}
+	}
+}
+
+.social-icons.animated {
+	.social-icon {
+		&:not(.share) {
+			visibility: hidden;
+			opacity:0;
+			transform:translateX(-15px);
+			transition-delay:0;
+		}
+
+		&:nth-child(2) {
+			transition-delay:.1s;
+		}
+		&:nth-child(3) {
+			transition-delay:.2s;
+		}
+		&:nth-child(4) {
+			transition-delay:.3s;
+		}
+		&:nth-child(5) {
+			transition-delay:.4s;
+		}
+		&:nth-child(6) {
+			transition-delay:.5s;
+		}
+		&:nth-child(7) {
+			transition-delay:.6s;
+		}
+		&:nth-child(8) {
+			transition-delay:.7s;
+		}
+	}
+
+	&.opened { 
+		.social-icon {
+			opacity:1;
+			transform:translateX(0);
+			visibility: visible;
+			
+		}
+	}
+}

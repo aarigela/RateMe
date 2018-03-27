@@ -1,0 +1,40 @@
+// Login 
+.new-customer-section,
+.registered-customer-section {
+	font: 400 17px/1.35 $second-font-family;
+	color: #777;
+
+	p {
+		margin-bottom:19px;
+	}
+}
+
+.new-customer-section {
+	@media (min-width: 768px) {
+		min-height:185px;
+	}
+
+	.btn {
+		min-width: 230px;
+	}
+}
+
+.registered-customer-section {
+	.btn {
+		min-width: 140px;
+	}
+}
+
+.form-action {
+	.forget-link {
+		float:right;
+		font-size:16px;
+		color: #999999;
+		margin-top:14px;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+	}
+}

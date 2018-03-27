@@ -1,0 +1,36 @@
+// Homepage 7 - Index7.html
+.home7 {
+	#wrapper {
+		background-color: #fcfcfc;
+	}
+
+	.socials-section {
+		h2 {
+			font-size:30px;
+			font-weight:400;
+			font-family: $third-font-family;
+			margin-bottom:30px;
+
+			@media (min-width: 992px) {
+				margin-bottom:35px;
+			}
+		}
+
+		.socials-twitter-container {
+			font-family: $third-font-family;
+		}
+
+		.carousel-inner > .item {
+			padding-top: 85px;
+			padding-bottom:100px;
+
+			@media (min-width: 992px) {
+				min-height:530px;
+			}
+		}
+	}
+
+	.entry {
+		background-color: #fff;
+	}
+}

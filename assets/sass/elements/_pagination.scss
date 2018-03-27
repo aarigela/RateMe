@@ -1,0 +1,155 @@
+/* Paginations */
+.pagination-container {
+	margin:0 0 110px;
+	padding:0;
+	font-family: $second-font-family;
+
+	@media (min-width: 992px) {
+		margin-bottom: 130px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom: 160px;
+	}
+
+	@media (min-width: 1440px) {
+		margin-bottom: 180px;
+	}
+
+	label,
+	.pagination {
+		vertical-align:middle;
+	}
+
+	label {
+		font-weight: 400;
+		font-size: 16px;
+		line-height:45px;
+		color: #888888;
+		margin-bottom: 0;
+
+		@media (max-width: 767px) {
+			display:none;
+		}
+	}
+
+	.pagination {
+		@media (min-width: 768px) {
+			float:right;
+		}
+	}
+
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+
+.page-view-filter {
+	display:none;
+	float:right;
+
+	@media (min-width: 768px) {
+		display:block;
+		margin-right: 65px;
+	}
+
+	@media (min-width: 992px) {
+		margin-right:80px;
+	}
+
+	select.form-control {
+		font-size:16px;
+		height:auto;
+		padding:12px 40px 9px 20px;
+		background-position: calc(100% - 19px) center;
+		margin:0;
+
+		@media (min-width: 768px) {
+			min-width: 140px;
+		}
+
+		@media (min-width: 992px) {
+			min-width: 170px;
+		}
+	}
+}
+
+.pagination {
+	margin:0;
+
+	> li {
+
+		&:last-child {
+			> a,
+			> span {
+				margin-right:0;
+			}
+		}
+
+		> a,
+		> span {
+			float: left;
+			padding: 13px 13px 9px;
+			color: #888888;
+			text-decoration: none;
+			background-color: #fff;
+			border: 1px solid #dfdfdf;
+			transition: all 0.45s;
+			margin-right: 10px;
+			border-radius: 2px;
+			min-width:45px;
+			text-align:center;
+			transition: background-color 0.4s, border 0.4s, background-image 0.01s;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: $first-color;
+				border-color: $first-color;
+			}
+		}
+		
+		> a.next-icon {
+			width:45px;
+			height:45px;
+			@include sprite-position($pagination-next);
+
+			&:hover,
+			&:focus {
+				@include sprite-position($pagination-next-hover);
+			}
+		}
+
+		&:first-child,
+		&:last-child {
+			> a,
+			> span {
+				border-radius: 2px;
+			}
+		}
+
+		&:last-child {
+			> a,
+			> span {
+				min-width: 35px;
+				text-align:center;
+			}
+		}
+
+		&.active {
+			> a,
+			> span {
+				&,
+				&:hover,
+				&:focus {
+					color: $first-color;
+					background-color: #fff;
+  					border-color: $first-color;
+				}
+				  
+			}
+		}
+	}
+}

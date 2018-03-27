@@ -1,0 +1,177 @@
+// Homepage 4 - Index4.html
+.home4 {
+	#wrapper {
+		background-color: #f6f6f6;
+	}
+
+	.testimonials-section {
+		margin-bottom:70px;
+		
+		@media (min-width: 992px) {
+			margin-bottom: 80px;
+		}
+	}
+
+	.testimonials-section {
+		@media (min-width: 1200px) {
+			margin-bottom: 100px;
+		}
+	}
+}
+
+.category-tab-container {
+	margin-bottom:70px;
+
+	@media (min-width: 992px) {
+		margin-bottom:90px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom:110px;
+	}
+
+	@media (min-width: 1600px) {
+		margin-bottom:130px;
+	}
+
+	.col-lg-3 {
+		@media (min-width: 1200px) {
+			width: 24.46%;
+		}
+	}
+
+	.col-lg-9 {
+		@media (min-width: 1200px) {
+			width: 75.54%;
+		}
+	}
+
+	.banner {
+		display:none;
+		@media (min-width: 1200px) {
+			display:block;
+			margin-bottom:0;
+		}
+	}
+}
+
+.category-tab-slider {
+	overflow:hidden;
+	padding-bottom:10px;
+
+	.swiper-container,
+	.swiper-wrapper {
+		overflow: visible !important;
+	}
+
+	/* fix to make swiper slider work in a tab-pane
+	-- simple solution with css */
+	.tab-content>.tab-pane.active {
+		display:block;
+		height:auto;
+		overflow:visible;
+	}
+
+	.tab-content>.tab-pane {
+		display:block;
+		height:0;
+		overflow:hidden;
+	}
+
+	header {
+		padding-right:60px;
+		border-bottom:2px solid #e9e9e9;
+		margin-bottom:25px;
+
+		@media (min-width: 768px) {
+			padding-right:80px;
+		}
+
+		@media (min-width:1200px) {
+			padding-right:100px;
+		}
+
+		h2 {
+			font-size:22px;
+			font-weight: 700;
+			line-height:1;
+			letter-spacing: 0.05em;
+			color:#585858;
+			margin-bottom:20px;
+
+			@media (min-width: 768px) {
+				margin-top:11px;
+				margin-bottom:0;
+				float:left;
+			}
+		}
+
+		.nav.nav-tabs {
+			margin-bottom:0;
+
+			@media (min-width: 768px) {
+				text-align:right;
+			}
+		}
+	}
+
+	.nav.nav-tabs {
+		border-bottom:none;
+		> li {
+			margin-bottom:-2px;
+
+			+ li {
+				margin-left:8px;
+
+				@media (min-width: 768px) {
+					margin-left:18px;
+				}
+
+				@media (min-width: 1200px) {
+					margin-left:31px;
+				}
+
+				@media (min-width: 1600px) {
+					margin-left:41px;
+				}
+			}
+
+			> a  {
+				padding:11px 5px 7px;
+				font:600 13px/1.5 $second-font-family;
+				color:#adadad;
+				letter-spacing: 0.06em;
+				transition: background 0.35s;
+				border: 2px solid transparent;
+				border-radius: 0;
+				margin:0;
+
+				@media (min-width: 768px) {
+					font-size:14px;
+					padding-left:14px;
+					padding-right: 14px;
+				}
+
+				@media (min-width: 1200px) {
+					padding-left:21px;
+					padding-right: 21px;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: $first-color;
+				}
+			}
+
+			&.active {
+				> a {
+					background-color: transparent;
+					color: $first-color;
+					border-color: #e8e8e8;
+					border-bottom-color: #f6f6f6;
+				}
+			}
+		}
+	}
+}

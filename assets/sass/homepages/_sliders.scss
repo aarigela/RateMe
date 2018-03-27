@@ -1,0 +1,166 @@
+// Home Sliders
+/* This is important to make background check plugin work 
+Otherwise it won't work with Revolution slider 
+Simple Solution without any js modifications
+Rev slider not use display:none - so it confuses bg check plugin */
+.rev_slider_bgcheck .rev_slider >ul >li:not(.active-revslide) .tp-bgimg,
+.rev_slider_bgcheck .tp-revslider-mainul >li:not(.active-revslide) .tp-bgimg { 
+	display:none;
+}
+
+.rev_slider {
+	background-color: #e7e7e7;
+}
+
+.tp-caption.revslider-title,
+.tp-caption.revslider-text {
+	color:#444444;
+
+	&.lighter {
+		color:#707070;
+
+		&.background--light {
+			color:#707070;
+		}
+	}
+
+	&.background--light {
+		color:#444444;
+	}
+	
+	&.light,
+	&.background--dark {
+		color:#fff;
+	}
+}
+
+.tp-caption.revslider-text {
+	font-family: $second-font-family;
+	letter-spacing: 0.05em;
+	@media (max-width: 767px) {
+		display:none !important;
+	}
+}
+
+.tp-caption.revslider-title.darker {
+	color:#3e3e3e;
+
+	&.background--light {
+		color:#3e3e3e;
+	}
+	
+	&.light,
+	&.background--dark {
+		color:#fff;
+	}
+}
+
+.tp-caption.btn {
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.tp-caption.revslider-title {
+	font-family: $third-font-family;
+	font-weight:700;
+	line-height:1;
+	letter-spacing: 0.05em;
+
+	&.v2 {
+		font-family: $second-font-family;
+		letter-spacing: 0.1em;
+	}
+}
+
+.tp-caption.revslider-subtitle {
+	color:#555;
+	font-family: $second-font-family;
+	font-weight:600;
+	letter-spacing: 0.07em;
+
+	&.background--light {
+		color:#555;
+	}
+
+	&.background--dark {
+		color:#fff;
+	}
+
+	&.v2 {
+		font-family: $third-font-family;
+	}
+}
+
+.custom {
+	// Slider Nav Buttons
+	&.tp-bullets {
+		&.background--light {
+			.tp-bullet {
+				border-color: #444;
+			}
+		}
+
+		.tp-bullet {
+			width:8px;
+			height:8px;
+			border-radius:50%;
+			background: transparent;
+			border:2px solid #fff;
+			transition: background-color 0.4s, border-color 0.4s;
+
+			&:hover,
+			&:focus,
+			&.selected {
+				background: $first-color;
+				border-color: $first-color;
+			}
+		}
+	}
+	
+
+	// Slider Nav ARrows
+	&.tparrows {
+		width:55px;
+		height:55px;
+		border-radius: 50%;
+		border:2px solid #fff;
+		background: transparent;
+		background-image: url('../images/slider-arrows.png');
+		background-position: 0 0;
+		transition: background-color 0.4s, border-color 0.4s;
+
+		&.background--light {
+			border-color: #444;
+			background-position: 0 -51px;
+
+			&:hover,
+			&:focus {
+				background-position: 0 0;
+			}
+		}
+
+		&:before {
+			display:none;
+		}
+
+		&.tp-rightarrow {
+			background-position: -51px 0;
+
+			&.background--light {
+				background-position: -51px -51px;
+
+				&:hover,
+				&:focus {
+					background-position: -51px 0;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $first-color;
+			background-image: url('../images/slider-arrows.png');
+			border-color: $first-color;
+		}
+	}
+}

@@ -1,0 +1,127 @@
+/////////* Simple Variables *////////////
+$font-family: Arial, sans-serif;
+$second-font-family: 'Hind', sans-serif;
+$third-font-family: 'Fira Sans', Arial, sans-serif;
+
+$site-text-color: #888888;
+
+
+//Headings size - color
+$headings-text-color: #666;
+$h1-size: 28px;
+$h2-size: 25px;
+$h3-size: 22px;
+$h4-size: 18px;
+$h5-size: 16px;
+$h6-size: 14px;
+
+
+$dark-bg: #171717;
+$darker-bg: #101010;
+
+
+// Color Scheme
+$first-color: #00aeff;
+$second-color: #51cdeb;
+$third-color: #7ccbfb;
+$fourth-color: #ed4e24;
+$fifth-color: #6ed1ff;
+$sixth-color: #81ccfc;
+$seventh-color: #73c6fc;
+$eighth-color: #9dd6fb;
+$ninth-color: #ffb800;
+
+
+// Color Scheme Index 3
+/* Use These variable to create style-index3.css
+$first-color: #5fd3ef;
+$second-color: #029be2;
+$third-color: #51cceb;
+$fourth-color: #ed4e24;
+$fifth-color: #38afe9;
+$sixth-color: #029be1;
+$seventh-color: #0ba3ee;
+$eighth-color: #53cceb;
+$ninth-color: #0ba3ec;
+*/
+
+// Color Scheme Index 4
+/* Use These variable to create style-index4.css
+$first-color: #00aeff;
+$second-color: #029be2;
+$third-color: #51cceb;
+$fourth-color: #ed4e24;
+$fifth-color: #38afe9;
+$sixth-color: #029be1;
+$seventh-color: #0ba3ee;
+$eighth-color: #53cceb;
+$ninth-color: #0ba3ec;
+*/
+
+// Color Scheme Index 6
+/* Use These variable to create style-index6.css
+$first-color: #60d3f0;
+$second-color: #51cdeb;
+$third-color: #51cdeb;
+$fourth-color: #ed4e24;
+$fifth-color: #00aeff;
+$sixth-color: #029be1;
+$seventh-color: #0ba3ee;
+$eighth-color: #53cceb;
+$ninth-color: #0ba3ec;
+*/
+
+// Portfolio
+$portfolio-gutter: 30px;
+$smaller-portfolio-gutter: 28px;
+
+@media (min-width: 1200px) {
+	$portfolio-gutter: 40px;
+}
+
+// colors
+.bg-custom {
+	background-color: $first-color;
+	color:#fff;
+}
+
+.bg-custom2 {
+	background-color: $second-color;
+	color:#fff;
+}
+
+.bg-custom6 {
+	background-color: $sixth-color;
+	color:#fff;
+}
+
+.bg-custom7 {
+	background-color: $seventh-color;
+	color:#fff;
+}
+
+.bg-dark {
+	background-color: $dark-bg;
+	color:#fff;
+}
+
+.bg-darker {
+	background-color: $darker-bg;
+	color:#fff;
+}
+
+.bg-gray {
+	background-color: #f0f0f0;
+}
+
+.bg-gray2 {
+	background-color: #eee;
+}
+
+.bg-gray3 {
+	background-color: #f8f8f8;
+}
+
+.bg-white {
+	background-color: #fff;
+}

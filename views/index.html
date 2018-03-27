@@ -1,0 +1,1852 @@
+<!-- HOME PAGE to the Website. Calls all the Other Pages
+
+    All Functionality and loading of books/class notes on this page
+-->
+
+<!DOCTYPE html>
+<html class="ie9">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RateMe</title>
+        <meta name="description" content="Premium eCommerce Template">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/ffs-favicon.png">
+
+        <link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300' rel='stylesheet' type='text/css'>
+
+        <link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="assets/css/plugins.min.css">
+        <link rel="stylesheet" href="assets/css/settings.css">
+        <link rel="stylesheet" href="assets/css/navigation.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="node_modules/jquery.rateit/scripts/rateit.css">
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header class="header sticky-header border-less border-gray">
+                <div class="container-fluid">
+                    <div class="logo">
+                        <a href="/" title="RateMe">
+                            <img src="assets/images/ffs-logo-final.png" alt="RateMe">
+                        </a>
+                    </div>
+
+                    <nav class="menu-container">
+                        <ul class="menu">
+                            <li><a href="#" onclick="books()">Books</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" onclick="goodreads()">Good Reads</a>
+                                        <ul>
+                                            <li><a href="#" onclick="goodreads_children()">Children's Books</a></li>
+                                            <li><a href="#" onclick="goodreads_comics()">Comics</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_humor()">Humor & Entertainment</a></li>
+                                            <li><a href="#" onclick="goodreads_mystery()">Mystery, Thriller & Suspense</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_romance()">Romance</a></li>
+                                            <li><a href="#" onclick="goodreads_science()">Science Fiction & Fantasy</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_teen()">Teen & Young Adult</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="knowledge()">Knowledge</a>
+                                        <ul>
+                                            <li><a href="#" onclick="knowledge_business()">Business</a></li>
+                                            <li><a href="#" onclick="knowledge_computer()">Computers & Technology</a>
+                                            </li>
+                                            <li><a href="#" onclick="knowledge_education()">Education & Teaching</a></li>
+                                            <li><a href="#" onclick="knowledge_history()">History</a></li>
+                                            <li><a href="#" onclick="knowledge_law()">Law</a></li>
+                                            <li><a href="#" onclick="knowledge_literature()">Literature & Fiction</a></li>
+                                            <li><a href="#" onclick="knowledge_medical()">Medical Books</a>
+                                            </li>
+                                            <li><a href="#" onclick="knowledge_politics()">Politics & Social Sciences</a></li>
+                                            <li><a href="#" onclick="knowledge_references()">Reference</a></li>
+                                            <li><a href="#" onclick="knowledge_sciences()">Sciences & Mathematics</a></li>
+                                            <li><a href="#" onclick="knowledge_sports()">Sports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="lifestyle()">Lifestyle</a>
+                                        <ul>
+                                            <li><a href="#" onclick="lifestyle_arts()">Arts & Photography</a>
+                                            </li>
+                                            <li><a href="#" onclick="lifestyle_biographies()">Biographies</a>
+                                            </li>
+                                            <li><a href="#" onclick="lifestyle_food()">Food & Drinks</a></li>
+                                            <li><a href="#" onclick="lifestyle_health()">Health</a></li>
+                                            <li><a href="#" onclick="lifestyle_lgbt()">LGBT</a></li>
+                                            <li><a href="#" onclick="lifestyle_parenthood()">Parenthood & Relationships</a></li>
+                                            <li><a href="#" onclick="lifestyle_philosophy()">Philosophy & Learning</a></li>
+                                            <li><a href="#" onclick="lifestyle_religion()">Religion & Spirituality</a></li>
+                                            <li><a href="#" onclick="lifestyle_travel()">Travel</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>                            
+                        </ul>
+
+                        <ul class="mobile-menu">
+                            <li><a href="#" onclick="books()">Books</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" onclick="goodreads()">Good Reads</a>
+                                        <ul>
+                                            <li><a href="#" onclick="goodreads_children()">Children's Books</a></li>
+                                            <li><a href="#" onclick="goodreads_comics()">Comics</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_humor()">Humor & Entertainment</a></li>
+                                            <li><a href="#" onclick="goodreads_mystery()">Mystery, Thriller & Suspense</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_romance()">Romance</a></li>
+                                            <li><a href="#" onclick="goodreads_science()">Science Fiction & Fantasy</a>
+                                            </li>
+                                            <li><a href="#" onclick="goodreads_teen()">Teen & Young Adult</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="knowledge()">Knowledge</a>
+                                        <ul>
+                                            <li><a href="#" onclick="knowledge_business()">Business</a></li>
+                                            <li><a href="#" onclick="knowledge_computer()">Computers & Technology</a>
+                                            </li>
+                                            <li><a href="#" onclick="knowledge_education()">Education & Teaching</a></li>
+                                            <li><a href="#" onclick="knowledge_history()">History</a></li>
+                                            <li><a href="#" onclick="knowledge_law()">Law</a></li>
+                                            <li><a href="#" onclick="knowledge_literature()">Literature & Fiction</a></li>
+                                            <li><a href="#" onclick="knowledge_medical()">Medical Books</a>
+                                            </li>
+                                            <li><a href="#" onclick="knowledge_politics()">Politics & Social Sciences</a></li>
+                                            <li><a href="#" onclick="knowledge_references()">Reference</a></li>
+                                            <li><a href="#" onclick="knowledge_sciences()">Sciences & Mathematics</a></li>
+                                            <li><a href="#" onclick="knowledge_sports()">Sports</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="lifestyle()">Lifestyle</a>
+                                        <ul>
+                                            <li><a href="#" onclick="lifestyle_arts()">Arts & Photography</a>
+                                            </li>
+                                            <li><a href="#" onclick="lifestyle_biographies()">Biographies</a>
+                                            </li>
+                                            <li><a href="#" onclick="lifestyle_food()">Food & Drinks</a></li>
+                                            <li><a href="#" onclick="lifestyle_health()">Health</a></li>
+                                            <li><a href="#" onclick="lifestyle_lgbt()">LGBT</a></li>
+                                            <li><a href="#" onclick="lifestyle_parenthood()">Parenthood & Relationships</a></li>
+                                            <li><a href="#" onclick="lifestyle_philosophy()">Philosophy & Learning</a></li>
+                                            <li><a href="#" onclick="lifestyle_religion()">Religion & Spirituality</a></li>
+                                            <li><a href="#" onclick="lifestyle_travel()">Travel</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>                            
+                        </ul>
+                    </nav>
+
+                    <div class="header-search-container">
+                        <form id="searching" onclick="searchbar()" class="header-search-form">
+                            <input id="searchval" type="search" class="form-control">
+                            <button type="submit" class="btn">
+                                <i class="icon icon-header-search"></i>
+                            </button>
+                        </form>
+                    </div><!-- End .header-search-container -->
+
+                    <div class="dropdowns-container">
+                        <button type="button" class="navbar-toggle">
+                            <span class="toggle-wrapper">
+                                <span class="toggle-text">Menu</span>
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </span>
+                        </button>
+                        <div class="dropdowns-wrapper">
+                            <ul class="header-dropdown account-dropdown">
+                                <li>
+                                    <a href="/MyDashboard">
+                                        <i class="icon icon-header icon-user"></i>
+                                        <span>My Dashboard</span>
+                                    </a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="/PersonalInformation" id = "account" name="account">
+                                                <i class="icon icon-dropdown icon-dropdown-user"></i>
+                                                <span>My Account</span>
+                                            </a>
+                                        </li>                                        
+                                        <li>
+                                          <a href="/UserLogout" id = "logout" name="logout">
+                                              <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                              <span>Logout</span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="/login" id = "login" name="login">
+                                              <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                              <span>Register/Login</span>
+                                          </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                            <ul class="header-dropdown">
+                                <li>
+                                    <a title="Currency">
+                                        <i class="icon icon-header icon-globe"></i>
+                                        <span>Currency</span>
+                                    </a>
+
+                                    <ul>
+                                        <li>
+                                            <a>
+                                                <i class="icon icon-dropdown icon-currency"></i>
+                                                <span>Currency</span>
+                                            </a>
+
+                                            <ul>
+                                                <li><a onclick="currency_INR()">INR</a></li>
+                                                <li><a onclick="currency_USD()">US Dollar</a></li>
+                                                <li><a onclick="currency_EUR()">Euro</a></li>
+                                                <li><a onclick="currency_GBP()">Pound</a></li>
+                                                <li><a onclick="currency_CNY()">Yuan</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- End .dropdowns-wrapper -->
+                    </div><!-- End .dropdowns-container -->
+
+                </div><!-- End .container-fluid -->
+            </header><!-- End .header -->
+
+            <div class="mb30"></div><!-- margin -->
+
+            <div class="main">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-9 col-md-push-3">
+
+                            <div class="mb35 mb20-sm"></div><!-- margin -->
+
+                            <div class="products-tab" role="tabpanel">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-pills nav-bordered simple-tabs text-center text-uppercase" role="tablist">
+
+                                    <li role="presentation" class="active">
+                                        <a href="#tab-latest" aria-controls="tab-latest" role="tab" data-toggle="tab" onclick="mainLatest()">
+                                            Latest Releases
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation">
+                                        <a href="#tab-bestsellers" aria-controls="tab-bestsellers" role="tab" data-toggle="tab" onclick="mainBestseller()">
+                                            Bestsellers
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation">
+                                        <a href="#tab-highestrated" aria-controls="tab-highestrated" role="tab" data-toggle="tab" onclick="mainHighestrated()">
+                                            Highest Rated
+                                        </a>
+                                    </li>
+
+                                    <li role="presentation">
+                                        <a href="#tab-under10" id="currency_under10" aria-controls="tab-under10" role="tab" data-toggle="tab" onclick="mainUnder10()">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab Panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="tab-latest">
+                                        <div class="row product-container-row">
+
+                                            <div class="products-container max-col-3" data-layoutmode="fitRows" id="product_data_latest">
+                                            </div>
+
+                                        </div><!-- End .row -->
+                                    </div><!-- End .tab-pane -->
+
+                                    <div role="tabpanel" class="tab-pane" id="tab-bestsellers">
+                                        <div class="row product-container-row">
+
+                                            <div class="products-container max-col-3" data-layoutmode="fitRows" id="product_data_bestseller">
+                                            </div>
+
+                                        </div><!-- End .row -->
+                                    </div><!-- End .tab-pane -->
+
+                                    <div role="tabpanel" class="tab-pane" id="tab-highestrated">
+                                        <div class="row product-container-row">
+
+                                            <div class="products-container max-col-3" data-layoutmode="fitRows" id="product_data_highestrated">
+                                            </div>
+
+                                        </div><!-- End .row -->
+                                    </div><!-- End .tab-pane -->
+
+                                    <div role="tabpanel" class="tab-pane" id="tab-under10">
+                                        <div class="row product-container-row">
+
+                                            <div class="products-container max-col-3" data-layoutmode="fitRows" id="product_data_under10">
+                                            </div>
+
+                                        </div><!-- End .row -->
+                                    </div><!-- End .tab-pane -->
+                                </div><!-- End .tab-content -->
+
+                            </div><!-- End role="tabpanel" -->
+
+                            <div class="mb35 mb20-sm"></div><!-- margin -->
+                        </div><!-- End .col-md-9 -->
+
+                        <aside class="col-md-3 col-md-pull-9 sidebar">
+
+                            <div class="widget widget-category">
+                                <h3 class="widget-title">
+                                    Shop By Categories
+                                    <i class="icon cat-title-icon"></i>
+                                </h3>
+                                <ul class="category-list">
+                                    <li>
+                                        <a href="#" onclick="books()"><font size="6">BOOKS</font></a>
+                                        &nbsp;
+                                        <a data-toggle="collapse" href="#collapse_books"><font size="6"><img src="assets/images/select-icon.png" alt="Select Icon"></font></a>
+                                        <div id="collapse_books" class="panel-collapse collapse">
+
+                                            <br><a href="#" onclick="goodreads()"><font size="5">Good Reads</font></a>
+                                            &nbsp;
+                                            <a data-toggle="collapse" href="#collapse_goodreads"><img src="assets/images/select-icon1.png" alt="Select Icon"></a>
+                                            <div id="collapse_goodreads" class="panel-collapse collapse">
+
+                                                <br><a href="#" onclick="goodreads_children()"><font size="4">Children's Books</font></a>
+                                                <br><a href="#" onclick="goodreads_comics()"><font size="4">Comics</font></a>
+                                                <br><a href="#" onclick="goodreads_humor()"><font size="4">Humor & Entertainment</font></a>
+                                                <br><a href="#" onclick="goodreads_mystery()"><font size="4">Mystery, Thriller & Suspense</font></a>
+                                                <br><a href="#" onclick="goodreads_romance()"><font size="4">Romance</font></a>
+                                                <br><a href="#" onclick="goodreads_science()"><font size="4">Science Fiction & Fantasy</font></a>
+                                                <br><a href="#" onclick="goodreads_teen()"><font size="4">Teen & Young Adult</font></a>
+
+                                            </div>
+
+                                            <br><a href="#" onclick="knowledge"><font size="5">Knowledge</font></a>
+                                            &nbsp;
+                                            <a data-toggle="collapse" href="#collapse_knowledge"><font size="5"><img src="assets/images/select-icon2.png" alt="Select Icon"></font></a>
+                                            <div id="collapse_knowledge" class="panel-collapse collapse">
+                                                <br><a href="#" onclick="knowledge_business()"><font size="4">Business</font></a>
+                                                <br><a href="#" onclick="knowledge_computer()"><font size="4">Computers & Technology</font></a>
+                                                <br><a href="#" onclick="knowledge_education()"><font size="4">Education & Teaching</font></a>
+                                                <br><a href="#" onclick="knowledge_history()"><font size="4">History</font></a>
+                                                <br><a href="#" onclick="knowledge_law()"><font size="4">Law</font></a>
+                                                <br><a href="#" onclick="knowledge_literature()"><font size="4">Literature & Fiction</font></a>
+                                                <br><a href="#" onclick="knowledge_medical()"><font size="4">Medical Books</font></a>
+                                                <br><a href="#" onclick="knowledge_politics()"><font size="4">Politics & Social Sciences</font></a>
+                                                <br><a href="#" onclick="knowledge_references()"><font size="4">References</font></a>
+                                                <br><a href="#" onclick="knowledge_sciences()"><font size="4">Sciences & Mathematics</font></a>
+                                                <br><a href="#" onclick="knowledge_sports()"><font size="4">Sports</font></a>
+                                            </div>
+
+                                            <br><a href="#" onclick="lifestyle()"><font size="5">Lifestyle</font></a>
+                                            &nbsp;
+                                            <a data-toggle="collapse" href="#collapse_lifestyle"><font size="5"><img src="assets/images/select-icon3.png" alt="Select Icon"></font></a>
+                                            <div id="collapse_lifestyle" class="panel-collapse collapse">
+                                                <br><a href="#" onclick="lifestyle_arts()"><font size="4">Arts & Photography</font></a>
+                                                <br><a href="#" onclick="lifestyle_biographies()"><font size="4">Biographies</font></a>
+                                                <br><a href="#" onclick="lifestyle_food()"><font size="4">Food & Drinks</font></a>
+                                                <br><a href="#" onclick="lifestyle_health()"><font size="4">Health</font></a>
+                                                <br><a href="#" onclick="lifestyle_lgbt()"><font size="4">LGBT</font></a>
+                                                <br><a href="#" onclick="lifestyle_parenthood()"><font size="4">Parenthood & Relationships</font></a>
+                                                <br><a href="#" onclick="lifestyle_philosophy()"><font size="4">Philosophy & Learning</font></a>
+                                                <br><a href="#" onclick="lifestyle_religion()"><font size="4">Religion & Spirituality</font></a>
+                                                <br><a href="#" onclick="lifestyle_travel()"><font size="4">Travel</font></a>
+                                            </div>
+                                        </div>
+                                    </li>                                    
+                                </ul>
+                            </div><!-- End .widget -->
+
+                            <div class="widget widget-category">
+                                <h3 class="widget-title">
+                                    Refine Search
+                                    <i class="icon cat-title-icon"></i>
+                                </h3>
+                                <ul class="category-list">
+                                    <li>
+                                        <font size="5">Format</font>
+                                        &nbsp;
+                                        <select id="format" onchange="selectFormat()">
+                                            <option selected="selected"> --- </option>
+                                            <option>Paperback</option>
+                                            <option>Hardcover</option>
+                                            <option>Kindle Edition</option>
+                                            <option>Large Print</option>
+                                            <option>Audible Audio Edition</option>
+                                            <option>Printed Access Code</option>
+                                            <option>Digital Access Code</option>
+                                            <option>Loose Leaf</option>
+                                            <option>Audio CD</option>
+                                            <option>Board Book</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <font size="5">Language</font>
+                                        &nbsp;
+                                        <select id="language" onchange="selectLanguage()">
+                                            <option selected="selected"> --- </option>
+                                            <option>English</option>
+                                            <option>German</option>
+                                            <option>French</option>
+                                            <option>Spanish</option>
+                                            <option>Italian</option>
+                                            <option>Arabic</option>
+                                            <option>Urdu</option>
+                                            <option>Russian</option>
+                                            <option>Hindi</option>
+                                            <option>Japanese</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <font size="5">Condition</font>
+                                        &nbsp;
+                                        <select id="condition" onchange="selectCondition()">
+                                            <option selected="selected"> --- </option>
+                                            <option>New</option>
+                                            <option>Used</option>
+                                            <option>Collectible</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <font size="5">Price</font>
+                                        <br>
+                                        <label for="price-low" id="min-label"></label>
+                                        <input type="text" value="min" id="price-low" name="price-low" maxlength="9" size="6%" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' onblur="if (this.value == '') {this.value = 'min';}"
+                                               onfocus="if (this.value == 'min') {this.value = '';}">
+                                        &nbsp;to&nbsp;
+                                        <label for="price-high" id="max-label"></label>
+                                        <input type="text" value="max" id="price-high" name="price-high" maxlength="9" size="6%" onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46' onblur="if (this.value == '') {this.value = 'max';}"
+                                               onfocus="if (this.value == 'max') {this.value = '';}">
+                                        <br>
+                                        <button id='priceButton' type='button' onclick="selectPrice()">GO</button>
+                                        <button id='priceReset' type='button' onclick="resetPrice()">RESET</button>
+                                    </li>
+                                    <li>
+                                        <font size="5">Rating</font>
+                                        <br>
+                                        <select id="rating">
+                                            <option value="0">Null</option>
+                                            <option value="1">Bad</option>
+                                            <option value="2">Considerable</option>
+                                            <option value="3">OK</option>
+                                            <option value="4">Great</option>
+                                            <option value="5">Excellent</option>
+                                        </select>
+                                        <div class="rateit" id="ratingval" data-rateit-backingfld="#rating" data-rateit-min="0" onclick="go()"></div> or more
+
+                                    </li>
+                                </ul>
+                            </div><!-- End .widget -->
+                            
+                        </aside>
+
+                    </div><!-- End .row -->
+                </div><!-- End .container-fluid -->
+            </div><!-- End .main -->
+
+            <footer class="footer footer2">
+                <div class="footer-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Your Profile</h4>
+                                    <ul class="links">
+                                        <li><a href="/MyDashboard">Dashboard</a></li>
+                                        <li><a href="/PersonalInformation">Account</a></li>                                        
+                                    </ul>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Follow Us</h4>
+
+                                    <div class="social-icons smaller">
+                                        <a href="#" class="social-icon icon facebook" title="Facebook"><span class="sr-only">Facebook</span></a>
+                                        <a href="#" class="social-icon icon twitter" title="Twitter"><span class="sr-only">Twitter</span></a>
+                                        <a href="#" class="social-icon icon instagram" title="Instagram"><span class="sr-only">Instagram</span></a>
+                                        <a href="mailto:rateMe.16@gmail.com" class="social-icon icon email" title="Email"><span class="sr-only">Email</span></a>
+                                    </div><!-- End .social-icons -->
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Contact Us</h4>
+                                    <ul class="links">
+                                        <li><a href="/faq">FAQs</a></li>
+                                    </ul>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget newsletter-widget">
+                                    <h4 class="widget-title">Copyright</h4>
+                                    <p>RateMe © 2018</p>
+                                    <p>All Rights Reserved. Except as permitted by the copyright law applicable to you, you may not reproduce or communicate any of the content on this website, including files downloadable from this website, without the permission of the copyright owner.</p>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </div><!-- End .footer-inner -->
+
+                <div class="footer-bottom text-center">
+                    <div class="container">
+                        <img src="assets/images/ffs-logo-final-footer.png" alt="RateMe" class="footer-logo">
+                        <div class="payment-info">
+                            <p>Coming up</p><p>Easy returns. Free shipping on orders over $50</p>
+                            <img src="assets/images/cards.png" alt="Payment methods">
+                        </div><!-- End .payment-info -->
+
+                    </div><!-- End .container -->
+                </div><!-- End .footer-bottom -->
+            </footer><!-- End .footer -->
+
+        </div><!-- End #wrapper -->
+
+        <!-- End -->
+        <script src="assets/js/plugins.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script src="node_modules/money.js"></script>
+
+        <script type="text/javascript">
+            // Load exchange rates data via AJAX:
+            $.getJSON(                    
+                    'https://openexchangerates.org/api/latest.json?app_id=8efe7f2ed4c04f11a26c7960b7358eb0',
+                    function(data) {
+                        // Check money.js has finished loading:
+                        if ( typeof fx !== "undefined" && fx.rates ) {
+                            fx.rates = data.rates;
+                            fx.base = data.base;
+                        } else {
+                            // If not, apply to fxSetup global:
+                            var fxSetup = {
+                                rates : data.rates,
+                                base : data.base
+                            }
+                        }
+                    }
+            );
+        </script>
+
+        <!-- REVOLUTION JS FILES -->
+        <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+        (Load Extensions only on Local File Systems !
+        The following part can be removed on Server for On Demand Loading) -->
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.migration.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.video.min.js"></script>
+
+
+        <!-- RATING JS FILES -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        <script src="node_modules/jquery.rateit/scripts/jquery.rateit.js"></script>
+
+        <!--PRODUCT FETCH AND DISPLAY-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+        <script>            
+            var latestData;
+
+            var b_format = null;
+            var b_language = null;
+            var b_condition = null;
+            var b_pricemin = 0;
+            var b_pricemax = 99999;
+            var b_rating = 0;
+            var b_search = null;
+            var b_currency = ["INR","USD","EUR","GBP","CNY"];
+            var b_currency_index = 1;
+
+            var books_category1 = null;
+            var books_category2 = null;
+
+            var notes_category1 = null;
+            var notes_category2 = null;
+
+            var isnotes = false;
+
+            function singlecall()
+            {
+                if($(".active.tab-pane").attr('id') == "tab-latest")
+                    showLatest();
+                else if($(".active.tab-pane").attr('id') == "tab-bestsellers")
+                    showBestseller();
+                else if($(".active.tab-pane").attr('id') == "tab-highestrated")
+                    showHighestrated();
+                else if($(".active.tab-pane").attr('id') == "tab-under10")
+                    showUnder10();
+            }
+
+            function singlecall_Notes()
+            {
+                if($(".active.tab-pane").attr('id') == "tab-latest")
+                    showLatest_Notes();
+                else if($(".active.tab-pane").attr('id') == "tab-bestsellers")
+                    showBestseller_Notes();
+                else if($(".active.tab-pane").attr('id') == "tab-highestrated")
+                    showHighestrated_Notes();
+                else if($(".active.tab-pane").attr('id') == "tab-under10")
+                    showUnder10_Notes();
+            }
+
+            function notes()
+            {
+                isnotes = true;
+                notes_category1 = null;
+                notes_category2 = null;
+                singlecall_Notes();
+            }
+
+            function arts()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = null;
+                singlecall_Notes();
+            }
+            function arts_arts()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "Arts";
+                singlecall_Notes();
+            }
+            function arts_humanities()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "Humanities";
+                singlecall_Notes();
+            }
+            function arts_law()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "Law";
+                singlecall_Notes();
+            }
+            function arts_property()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "Property";
+                singlecall_Notes();
+            }
+            function arts_socialsciences()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "SocialSciences";
+                singlecall_Notes();
+            }
+            function arts_socialwork()
+            {
+                isnotes = true;
+                notes_category1 = "Arts";
+                notes_category2 = "SocialWork";
+                singlecall_Notes();
+            }
+
+            function commerce()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = null;
+                singlecall_Notes();
+            }
+            function commerce_business()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = "Business";
+                singlecall_Notes();
+            }
+            function commerce_commerce()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = "Commerce";
+                singlecall_Notes();
+            }
+            function commerce_education()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = "Education";
+                singlecall_Notes();
+            }
+            function commerce_professional()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = "Professional";
+                singlecall_Notes();
+            }
+            function commerce_teaching()
+            {
+                isnotes = true;
+                notes_category1 = "Commerce";
+                notes_category2 = "Teaching";
+                singlecall_Notes();
+            }
+
+            function medicine()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = null;
+                singlecall_Notes();
+            }
+            function medicine_dentistry()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Dentistry";
+                singlecall_Notes();
+            }
+            function medicine_health()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Health";
+                singlecall_Notes();
+            }
+            function medicine_medicine()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Medicine";
+                singlecall_Notes();
+            }
+            function medicine_nursing()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Nursing";
+                singlecall_Notes();
+            }
+            function medicine_pharmacy()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Pharmacy";
+                singlecall_Notes();
+            }
+            function medicine_veterinary()
+            {
+                isnotes = true;
+                notes_category1 = "Medicine";
+                notes_category2 = "Veterinary";
+                singlecall_Notes();
+            }
+
+            function science()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = null;
+                singlecall_Notes();
+            }
+            function science_agriculture()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Agriculture";
+                singlecall_Notes();
+            }
+            function science_architecture()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Architecture";
+                singlecall_Notes();
+            }
+            function science_communications()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Communications";
+                singlecall_Notes();
+            }
+            function science_engineering()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Engineering";
+                singlecall_Notes();
+            }
+            function science_information()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Information";
+                singlecall_Notes();
+            }
+            function science_mathematics()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Mathematics";
+                singlecall_Notes();
+            }
+            function science_science()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Science";
+                singlecall_Notes();
+            }
+            function science_sports()
+            {
+                isnotes = true;
+                notes_category1 = "Science";
+                notes_category2 = "Sports";
+                singlecall_Notes();
+            }
+            function books()
+            {
+                isnotes = false;
+                books_category1 = null;
+                books_category2 = null;
+                singlecall();
+            }
+            function goodreads()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = null;
+                singlecall();
+            }
+            function goodreads_children()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Children";
+                singlecall();
+            }
+            function goodreads_comics()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Comics";
+                singlecall();
+            }
+            function goodreads_humor()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Humor";
+                singlecall();
+            }
+            function goodreads_mystery()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Mystery";
+                singlecall();
+            }
+            function goodreads_romance()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Romance";
+                singlecall();
+            }
+            function goodreads_science()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "ScienceFiction";
+                singlecall();
+            }
+            function goodreads_teen()
+            {
+                isnotes = false;
+                books_category1 = "GoodReads";
+                books_category2 = "Teen";
+                singlecall();
+            }
+            function knowledge()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = null;
+                singlecall();
+            }
+            function knowledge_business()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Business";
+                singlecall();
+            }
+            function knowledge_computer()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Computers";
+                singlecall();
+            }
+            function knowledge_education()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Education";
+                singlecall();
+            }
+            function knowledge_history()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "History";
+                singlecall();
+            }
+            function knowledge_law()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Law";
+                singlecall();
+            }
+            function knowledge_literature()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Literature";
+                singlecall();
+            }
+            function knowledge_medical()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Medical";
+                singlecall();
+            }
+            function knowledge_politics()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Politics";
+                singlecall();
+            }
+            function knowledge_references()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Reference";
+                singlecall();
+            }
+            function knowledge_sciences()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Sciences";
+                singlecall();
+            }
+            function knowledge_sports()
+            {
+                isnotes = false;
+                books_category1 = "Knowledge";
+                books_category2 = "Sports";
+                singlecall();
+            }
+            function lifestyle()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = null;
+                singlecall();
+            }
+            function lifestyle_arts()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Arts";
+                singlecall();
+            }
+            function lifestyle_biographies()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Biographies";
+                singlecall();
+            }
+            function lifestyle_food()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Food";
+                singlecall();
+            }
+            function lifestyle_health()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Health";
+                singlecall();
+            }
+            function lifestyle_lgbt()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "LGBT";
+                singlecall();
+            }
+            function lifestyle_parenthood()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Parenthood";
+                singlecall();
+            }
+            function lifestyle_philosophy()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Philosophy";
+                singlecall();
+            }
+            function lifestyle_religion()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Religion";
+                singlecall();
+            }
+            function lifestyle_travel()
+            {
+                isnotes = false;
+                books_category1 = "Lifestyle";
+                books_category2 = "Travel";
+                singlecall();
+            }
+            function mainLatest()
+            {
+                reset();
+                if (isnotes)
+                    showLatest_Notes();
+                else
+                    showLatest();
+            }
+            function mainBestseller()
+            {
+                reset();
+                if (isnotes)
+                    showBestseller_Notes();
+                else
+                    showBestseller();
+            }
+            function mainHighestrated()
+            {
+                reset();
+                if (isnotes)
+                    showHighestrated_Notes();
+                else
+                    showHighestrated();
+            }
+            function mainUnder10()
+            {
+                reset();
+                if (isnotes)
+                    showUnder10_Notes();
+                else
+                    showUnder10();
+            }
+            function reset()
+            {
+                b_format = null;
+                b_language = null;
+                b_condition = null;
+                b_pricemin = 0;
+                b_pricemax = 99999;
+                b_rating = 0;
+                document.getElementById("format").value = "---";
+                document.getElementById("language").value = "---";
+                document.getElementById("condition").value = "---";
+                document.getElementById("price-low").value = "min";
+                document.getElementById("price-high").value = "max";
+                document.getElementById("rating").value = 0;
+                var cols = document.getElementsByClassName('rateit-selected');
+                for(var i=0; i<cols.length; i++) {
+                    cols[i].style.height = '16px';
+                    cols[i].style.width = '0px';
+                    cols[i].style.display = 'block';
+                }
+            }
+            function currency_INR()
+            {
+                fx.settings = { from: "USD", to: "INR" };
+                b_currency_index = 0;
+                $('#currency_under10').html("Under ₹"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("₹");
+                $('#max-label').html("₹");
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+            function currency_USD()
+            {
+                fx.settings = { from: "USD", to: "USD" };
+                b_currency_index = 1;
+                $('#currency_under10').html("Under $"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("$");
+                $('#max-label').html("$");
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+            function currency_EUR()
+            {
+                fx.settings = { from: "USD", to: "EUR" };
+                b_currency_index = 2;
+                $('#currency_under10').html("Under €"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("€");
+                $('#max-label').html("€");
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+            function currency_GBP()
+            {
+                fx.settings = { from: "USD", to: "GBP" };
+                b_currency_index = 3;
+                $('#currency_under10').html("Under £"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("£");
+                $('#max-label').html("£");
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function currency_CNY()
+            {
+                fx.settings = { from: "USD", to: "CNY" };
+                b_currency_index = 4;
+                $('#currency_under10').html("Under ¥"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("¥");
+                $('#max-label').html("¥");
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function selectFormat(){
+                b_format = $("#format").val();
+                if(b_format == "---")
+                    b_format = null;
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function selectLanguage(){
+                b_language = $("#language").val();
+                if(b_language == "---")
+                    b_format = null;
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function selectCondition(){
+                b_condition = $("#condition").val();
+                if(b_condition == "---")
+                    b_format = null;
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function selectPrice(){
+                var t = document.getElementById("price-low").value;
+                
+                if (t == 'min')
+                    b_pricemin = 0;
+                else
+                    b_pricemin = parseInt(t);
+                t = document.getElementById("price-high").value;
+                
+                if(t == 'max')
+                    b_pricemax = 99999;
+                else
+                    b_pricemax = parseInt(t);
+                if (b_pricemin > b_pricemax)
+                {
+                    alert("Max price should be greater than Min price");
+                    resetPrice();
+                }
+                else
+                {
+                    if (isnotes)
+                        singlecall_Notes();
+                    else
+                        singlecall();
+                }
+            }
+
+            function resetPrice(){
+                b_pricemin = 0;
+                b_pricemax = 99999;
+                document.getElementById("price-low").value = "min";
+                document.getElementById("price-high").value = "max";
+            }
+
+            function go() {
+                var k1 = document.getElementById("rating").value;
+                if(k1 < 1)
+                    b_rating = 0;
+                else
+                    b_rating = parseInt(k1);
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            $("#searching").submit(function(e) {
+                e.preventDefault();
+            });
+
+            function searchbar() {
+                var temp = document.getElementById("searchval").value;
+                var temp2 = "%"+temp.toLowerCase()+"%";
+                b_search = temp2;
+                if (isnotes)
+                    singlecall_Notes();
+                else
+                    singlecall();
+            }
+
+            function product_book(b_id){
+                var t = b_id+',0';
+                window.location.href="/product?id="+t;
+            }
+            function product_notes(b_id){
+                var t = b_id+',1';
+                window.location.href="/product?id="+t;
+            }
+
+            $( document ).ready(function() {
+                b_currency_index = 1;
+                $('#currency_under10').html("Under $"+Number((fx.convert(10)).toFixed(2)));
+                $('#min-label').html("$");
+                $('#max-label').html("$");
+
+                var request = $.ajax({
+                    url:  "/books_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: $(".active.tab-pane").attr('id'),
+                        format: b_format,
+                        language: b_language,
+                        condition: b_condition,
+                        rating: b_rating,
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        books_category1: books_category1,
+                        books_category2: books_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            if (jsonData[i].code != null) {
+                                r[++j] = '<span class="product-label discount">';
+                                r[++j] = jsonData[i].couponCode;
+                                r[++j] = '</span>';
+                            }
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '<figure>';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = '<img src="' + jsonData[i].source + '" style="height:300px;" alt="Image">';
+                            r[++j] = '</a>';
+                            r[++j] = '</figure>';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].author;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].bookName;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                        }
+                        if ($(".tab-content .tab-pane.active").attr('id') == "tab-latest") {
+                            $('#product_data_latest').html(r.join(''));
+                        }
+                        else if ($(".tab-content .tab-pane.active").attr('id') == "tab-bestsellers") {
+                            $('#product_data_bestsellers').html(r.join(''));
+                        }
+                        else if ($(".tab-content .tab-pane.active").attr('id') == "tab-highestrated") {
+                            $('#product_data_highestrated').html(r.join(''));
+                        }
+                        else if ($(".tab-content .tab-pane.active").attr('id') == "tab-under10") {
+                            $('#product_data_under10').html(r.join(''));
+                        }                        
+                    }
+                });
+            });
+            
+            function showLatest()
+            {
+                var request = $.ajax({
+                    url:  "/books_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-latest",
+                        format: b_format,
+                        language: b_language,
+                        condition: b_condition,
+                        rating: b_rating,
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        books_category1: books_category1,
+                        books_category2: books_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            if (jsonData[i].code != null) {
+                                r[++j] = '<span class="product-label discount">';
+                                r[++j] = jsonData[i].couponCode;
+                                r[++j] = '</span>';
+                            }
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '<figure>';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = '<img src="' + jsonData[i].source + '" style="height:300px;" alt="Image">';
+                            r[++j] = '</a>';
+                            r[++j] = '</figure>';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].author;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].bookName;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_latest').html(r.join(''));
+                    }
+                });
+            }
+            
+            function showBestseller()
+            {
+                var request = $.ajax({
+                    url:  "/books_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-bestseller",
+                        format: b_format,
+                        language: b_language,
+                        condition: b_condition,
+                        rating: b_rating,
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        books_category1: books_category1,
+                        books_category2: books_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            if (jsonData[i].code != null) {
+                                r[++j] = '<span class="product-label discount">';
+                                r[++j] = jsonData[i].couponCode;
+                                r[++j] = '</span>';
+                            }
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '<figure>';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = '<img src="' + jsonData[i].source + '" style="height:300px;" alt="Image">';
+                            r[++j] = '</a>';
+                            r[++j] = '</figure>';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].author;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].bookName;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_bestseller').html(r.join(''));
+                    }
+                });
+            }
+
+            function showHighestrated_Notes()
+            {
+                var request = $.ajax({
+                    url:  "/notes_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-highestrated",
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        notes_category1: notes_category1,
+                        notes_category2: notes_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].classnotesId +',' + jsonData[i].sellerID+'" onclick="product_notes(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].university;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].classnotesId +',' + jsonData[i].sellerID+'" onclick="product_notes(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].name;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_highestrated').html(r.join(''));
+                    }
+                });
+            }
+
+            function showHighestrated()
+            {
+                var request = $.ajax({
+                    url:  "/books_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-highestrated",
+                        format: b_format,
+                        language: b_language,
+                        condition: b_condition,
+                        rating: b_rating,
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        books_category1: books_category1,
+                        books_category2: books_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            if (jsonData[i].code != null) {
+                                r[++j] = '<span class="product-label discount">';
+                                r[++j] = jsonData[i].couponCode;
+                                r[++j] = '</span>';
+                            }
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '<figure>';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = '<img src="' + jsonData[i].source + '" style="height:300px;" alt="Image">';
+                            r[++j] = '</a>';
+                            r[++j] = '</figure>';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].author;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].bookName;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_highestrated').html(r.join(''));
+                    }
+                });
+            }
+
+            function showUnder10_Notes()
+            {
+                var request = $.ajax({
+                    url:  "/notes_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-under10",
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        notes_category1: notes_category1,
+                        notes_category2: notes_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].classnotesId +',' + jsonData[i].sellerID+'" onclick="product_notes(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].university;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].classnotesId +',' + jsonData[i].sellerID+'" onclick="product_notes(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].name;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_under10').html(r.join(''));
+                    }
+                });
+            }
+
+            function showUnder10()
+            {
+                var request = $.ajax({
+                    url:  "/books_data",
+                    type: "POST",
+                    data: {
+                        tabDisplays: "tab-under10",
+                        format: b_format,
+                        language: b_language,
+                        condition: b_condition,
+                        rating: b_rating,
+                        pricemin: b_pricemin,
+                        pricemax: b_pricemax,
+                        search: b_search,
+                        books_category1: books_category1,
+                        books_category2: books_category2
+                    },
+                    success: function(data) {
+                        var r = new Array(), j = -1;
+                        var jsonData = JSON.parse(data);
+                        for (var i = 0; i < jsonData.length; i++) {
+                            var counter = jsonData[i];
+
+                            r[++j] = '<div class="product-column">';
+                            r[++j] = '<div class="product product2">';
+                            if (jsonData[i].code != null) {
+                                r[++j] = '<span class="product-label discount">';
+                                r[++j] = jsonData[i].couponCode;
+                                r[++j] = '</span>';
+                            }
+                            r[++j] = '<div class="product-top">';
+                            r[++j] = '<figure>';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = '<img src="' + jsonData[i].source + '" style="height:300px;" alt="Image">';
+                            r[++j] = '</a>';
+                            r[++j] = '</figure>';
+                            r[++j] = '</div>';
+                            r[++j] = '<div class="product-meta">';
+                            r[++j] = '<div class="product-brand">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].author;
+                            r[++j] = '</a>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '<h3 class="product-title">';
+                            r[++j] = '<a data-myinfo="'+jsonData[i].isbn +',' + jsonData[i].sellerID+'" onclick="product_book(this.dataset.myinfo)">';
+                            r[++j] = jsonData[i].bookName;
+                            r[++j] = '</a>';
+                            r[++j] = '</h3>';
+                            r[++j] = '<div class="product-price-container">';
+                            switch(b_currency_index) {
+                                case 0:
+                                    r[++j] = '<span class="product-price"> ₹';
+                                    break;
+                                case 1:
+                                    r[++j] = '<span class="product-price"> $';
+                                    break;
+                                case 2:
+                                    r[++j] = '<span class="product-price"> €';
+                                    break;
+                                case 3:
+                                    r[++j] = '<span class="product-price"> £';
+                                    break;
+                                case 4:
+                                    r[++j] = '<span class="product-price"> ¥';
+                                    break;
+                                default:
+                                    r[++j] = '<span class="product-price"> $';
+                            }
+                            r[++j] = Number((fx.convert(jsonData[i].price)).toFixed(2));
+                            r[++j] = '</span>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+                            r[++j] = '</div>';
+
+                        }
+                        $('#product_data_under10').html(r.join(''));
+                    }
+                });
+            }
+
+        </script>
+        <script>
+        $( document ).ready(function() {
+
+          var request = $.ajax({
+            url:  "/checkuserlogin",
+            type: "GET",
+            success: function(result) {              
+              if(result=='true')
+              {
+                $("#logout").show();
+                $("#account").show();
+                $("#orders").show();
+                $("#cards").show();
+                $("#login").hide();
+              }else{
+                $("#logout").hide();
+                $("#account").hide();
+                $("#orders").hide();
+                $("#cards").hide();
+                $("#login").show();
+              }
+            }
+          });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,753 @@
+<!-- Reference: https://themeforest.net/item/sconto-premium-ecommerce-template/16643705?s_rank=17 -->
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>RateMe</title>
+        <meta name="description" content="Premium eCommerce Template">
+
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/ffs-favicon.png">
+
+        <link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300' rel='stylesheet' type='text/css'>
+
+        <!-- Fira Sans Fix - Google Fira Sans sometimes fails to load -->
+        <link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="assets/css/plugins.min.css">
+        <link rel="stylesheet" href="assets/css/settings.css">
+        <link rel="stylesheet" href="assets/css/navigation.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="node_modules/jquery.rateit/scripts/rateit.css">
+
+    </head>
+    <body>
+        <div id="wrapper">
+          <header class="header sticky-header border-less border-gray">
+              <div class="container-fluid">
+                  <div class="logo">
+                      <a href="/index" title="RateMe">
+                          <img src="assets/images/ffs-logo-final.png" alt="RateMe">
+                      </a>
+                  </div><!-- End .logo -->
+
+                  <nav class="menu-container">
+                      <ul class="menu">
+                          <li><a href="/BooksPage">Books</a>
+                              <ul>
+                                  <li>
+                                      <a href="/Home_Books/GoodReadsPage">Good Reads</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/GoodReads/Children">Children's Books</a></li>
+                                          <li><a href="/Home_Books/GoodReads/Comics">Comics</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Marvel">Marvel</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_DC">DC</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_DarkHorse">Dark Horse Comics</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Image">Image Comics</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Humor">Humor & Entertainment</a></li>
+                                          <li><a href="/Home_Books/GoodReads/Mystery">Mystery, Thriller & Suspense</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Mystery">Mystery</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Thriller">Thrillers & Suspense</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Writing">Writing</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Romance">Romance</a></li>
+                                          <li><a href="/Home_Books/GoodReads/ScienceFiction">Science Fiction & Fantasy</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Fantasy">Fantasy</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Gaming">Gaming</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Science">Science</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Writing">Writing</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Teen">Teen & Young Adult</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Books/KnowledgePage">Knowledge</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/Knowledge/Business">Business</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Computers">Computers & Technology</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Databases">Databases & Big Data</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Graphics">Graphics & Design</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Hardware">Hardware & DIY</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Internet">Internet & Social Media</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Mobile">Mobile Phones, Tablets & E-Readers</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Networking">Networking & Cloud Computing</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_OperatingSystems">Operating Systems</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Programming">Programming</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Security">Security & Encryption</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Software">Software</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Web">Web Development & Design</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Knowledge/Education">Education & Teaching</a></li>
+                                          <li><a href="/Home_Books/Knowledge/History">History</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Law">Law</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Literature">Literature & Fiction</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Medical">Medical Books</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Administration">Administration & Medicine Economics</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Dentistry">Dentistry</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_History">History</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Medicine">Medicine</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Nursing">Nursing</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Psychology">Psychology</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Research">Research</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Veterinary">Veterinary Medicine</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Knowledge/Politics">Politics & Social Sciences</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Reference">Reference</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Sciences">Sciences & Mathematics</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Sports">Sports</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Books/LifestylePage">Lifestyle</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/Lifestyle/Arts">Arts & Photography</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Architecture">Architecture</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Collections">Collections, Catalogs & Exhibitions</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_DecorativeArts">Decorative Arts & Design</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_GraphicDesign">Graphic Design</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Painting">Painting</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_PerformingArts">Performing Arts</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Study">Study & Teaching</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Vehicle">Vehicle Pictorials</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Lifestyle/Biographies">Biographies</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Arts">Arts & Literature</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Ethnic">Ethnic & National</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Leaders">Leaders & Notable People</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Memoirs">Memoirs</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Professionals">Professionals & Academics</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Sports">Sports & Outdoors</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Travelers">Travelers & Explorers</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_TrueCrime">True Crime</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Lifestyle/Food">Food & Drinks</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Health">Health</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/LGBT">LGBT</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Parenthood">Parenthood & Relationships</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Philosophy">Philosophy & Learning</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Religion">Religion & Spirituality</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Travel">Travel</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="/NotesPage">Notes</a>
+                              <ul>
+                                  <li>
+                                      <a href="/Home_Notes/ArtsPage">Arts & Humanities</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Arts/Arts">Arts</a></li>
+                                          <li><a href="/Home_Notes/Arts/Humanities">Humanities & Media Studies</a></li>
+                                          <li><a href="/Home_Notes/Arts/Law">Law</a></li>
+                                          <li><a href="/Home_Notes/Arts/Property">Property</a></li>
+                                          <li><a href="/Home_Notes/Arts/SocialSciences">Social Sciences</a></li>
+                                          <li><a href="/Home_Notes/Arts/SocialWork">Social Work</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/CommercePage">Commerce & Education</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Commerce/Business">Business</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Commerce">Commerce</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Education">Education</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Professional">Professional Qualifications</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Teaching">Teaching & Training</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/MedicinePage">Medicine</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Medicine/Dentistry">Dentistry</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Health">Health</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Medicine">Medicine</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Nursing">Nursing</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Pharmacy">Pharmacy</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Veterinary">Veterinary Science</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/SciencePage">Science & Engineering</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Science/Agriculture">Agriculture & Environmental Studies</a></li>
+                                          <li><a href="/Home_Notes/Science/Architecture">Architecture, Design & Planning</a></li>
+                                          <li><a href="/Home_Notes/Science/Communications">Communications</a></li>
+                                          <li><a href="/Home_Notes/Science/Engineering">Engineering & Project Management</a></li>
+                                          <li><a href="/Home_Notes/Science/Information">Information Technologies</a></li>
+                                          <li><a href="/Home_Notes/Science/Mathematics">Mathematics</a></li>
+                                          <li><a href="/Home_Notes/Science/Science">Science & Technology</a></li>
+                                          <li><a href="/Home_Notes/Science/Sports">Sports Sciences</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+
+                      <ul class="mobile-menu">
+                          <li><a href="/BooksPage">Books</a>
+                              <ul>
+                                  <li>
+                                      <a href="/Home_Books/GoodReadsPage">Good Reads</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/GoodReads/Children">Children's Books</a></li>
+                                          <li><a href="/Home_Books/GoodReads/Comics">Comics</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Marvel">Marvel</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_DC">DC</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_DarkHorse">Dark Horse Comics</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Image">Image Comics</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Comics_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Humor">Humor & Entertainment</a></li>
+                                          <li><a href="/Home_Books/GoodReads/Mystery">Mystery, Thriller & Suspense</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Mystery">Mystery</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Thriller">Thrillers & Suspense</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Writing">Writing</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/Mystery_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Romance">Romance</a></li>
+                                          <li><a href="/Home_Books/GoodReads/ScienceFiction">Science Fiction & Fantasy</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Fantasy">Fantasy</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Gaming">Gaming</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Science">Science</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Writing">Writing</a></li>
+                                                  <li><a href="/Home_Books/GoodReads/ScienceFiction_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/GoodReads/Teen">Teen & Young Adult</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Books/KnowledgePage">Knowledge</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/Knowledge/Business">Business</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Computers">Computers & Technology</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Databases">Databases & Big Data</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Graphics">Graphics & Design</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Hardware">Hardware & DIY</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Internet">Internet & Social Media</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Mobile">Mobile Phones, Tablets & E-Readers</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Networking">Networking & Cloud Computing</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_OperatingSystems">Operating Systems</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Programming">Programming</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Security">Security & Encryption</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Software">Software</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Web">Web Development & Design</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Computers_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Knowledge/Education">Education & Teaching</a></li>
+                                          <li><a href="/Home_Books/Knowledge/History">History</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Law">Law</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Literature">Literature & Fiction</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Medical">Medical Books</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Administration">Administration & Medicine Economics</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Dentistry">Dentistry</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_History">History</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Medicine">Medicine</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Nursing">Nursing</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Psychology">Psychology</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Research">Research</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Veterinary">Veterinary Medicine</a></li>
+                                                  <li><a href="/Home_Books/Knowledge/Medical_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Knowledge/Politics">Politics & Social Sciences</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Reference">Reference</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Sciences">Sciences & Mathematics</a></li>
+                                          <li><a href="/Home_Books/Knowledge/Sports">Sports</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Books/LifestylePage">Lifestyle</a>
+                                      <ul>
+                                          <li><a href="/Home_Books/Lifestyle/Arts">Arts & Photography</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Architecture">Architecture</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Collections">Collections, Catalogs & Exhibitions</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_DecorativeArts">Decorative Arts & Design</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_GraphicDesign">Graphic Design</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Painting">Painting</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_PerformingArts">Performing Arts</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Study">Study & Teaching</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Vehicle">Vehicle Pictorials</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Arts_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Lifestyle/Biographies">Biographies</a>
+                                              <ul>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Arts">Arts & Literature</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Ethnic">Ethnic & National</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Leaders">Leaders & Notable People</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Memoirs">Memoirs</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Professionals">Professionals & Academics</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Sports">Sports & Outdoors</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Travelers">Travelers & Explorers</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_TrueCrime">True Crime</a></li>
+                                                  <li><a href="/Home_Books/Lifestyle/Biographies_Others">Others</a></li>
+                                              </ul>
+                                          </li>
+                                          <li><a href="/Home_Books/Lifestyle/Food">Food & Drinks</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Health">Health</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/LGBT">LGBT</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Parenthood">Parenthood & Relationships</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Philosophy">Philosophy & Learning</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Religion">Religion & Spirituality</a></li>
+                                          <li><a href="/Home_Books/Lifestyle/Travel">Travel</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="/NotesPage">Notes</a>
+                              <ul>
+                                  <li>
+                                      <a href="/Home_Notes/ArtsPage">Arts & Humanities</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Arts/Arts">Arts</a></li>
+                                          <li><a href="/Home_Notes/Arts/Humanities">Humanities & Media Studies</a></li>
+                                          <li><a href="/Home_Notes/Arts/Law">Law</a></li>
+                                          <li><a href="/Home_Notes/Arts/Property">Property</a></li>
+                                          <li><a href="/Home_Notes/Arts/SocialSciences">Social Sciences</a></li>
+                                          <li><a href="/Home_Notes/Arts/SocialWork">Social Work</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/CommercePage">Commerce & Education</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Commerce/Business">Business</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Commerce">Commerce</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Education">Education</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Professional">Professional Qualifications</a></li>
+                                          <li><a href="/Home_Notes/Commerce/Teaching">Teaching & Training</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/MedicinePage">Medicine</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Medicine/Dentistry">Dentistry</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Health">Health</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Medicine">Medicine</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Nursing">Nursing</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Pharmacy">Pharmacy</a></li>
+                                          <li><a href="/Home_Notes/Medicine/Veterinary">Veterinary Science</a></li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="/Home_Notes/SciencePage">Science & Engineering</a>
+                                      <ul>
+                                          <li><a href="/Home_Notes/Science/Agriculture">Agriculture & Environmental Studies</a></li>
+                                          <li><a href="/Home_Notes/Science/Architecture">Architecture, Design & Planning</a></li>
+                                          <li><a href="/Home_Notes/Science/Communications">Communications</a></li>
+                                          <li><a href="/Home_Notes/Science/Engineering">Engineering & Project Management</a></li>
+                                          <li><a href="/Home_Notes/Science/Information">Information Technologies</a></li>
+                                          <li><a href="/Home_Notes/Science/Mathematics">Mathematics</a></li>
+                                          <li><a href="/Home_Notes/Science/Science">Science & Technology</a></li>
+                                          <li><a href="/Home_Notes/Science/Sports">Sports Sciences</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </nav>
+
+                  <div class="header-search-container">
+                      <form action="#" class="header-search-form">
+                          <input type="search" class="form-control" required>
+                          <button type="submit" class="btn">
+                              <i class="icon icon-header-search"></i>
+                          </button>
+                      </form>
+                  </div><!-- End .header-search-container -->
+
+                  <div class="dropdowns-container">
+                      <button type="button" class="navbar-toggle">
+                          <span class="toggle-wrapper">
+                              <span class="toggle-text">Menu</span>
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </span>
+                      </button>
+                      <div class="dropdowns-wrapper">
+                          <ul class="header-dropdown account-dropdown">
+                              <li>
+                                  <a href="#">
+                                      <i class="icon icon-header icon-user"></i>
+                                      <span>My Dashboard</span>
+                                  </a>
+
+                                  <ul>
+                                      <li>
+                                          <a href="/PersonalInformation" id = "account" name="account">
+                                              <i class="icon icon-dropdown icon-dropdown-user"></i>
+                                              <span>My Account</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="/MyOrders" id = "orders" name="orders">
+                                              <i class="icon icon-dropdown icon-dropdown-wishlist"></i>
+                                              <span>My Orders</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="/MySavedCards" id = "cards" name="cards">
+                                              <i class="icon icon-dropdown icon-dropdown-check"></i>
+                                              <span>My Saved Cards</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="/UserLogout" id = "logout" name="logout">
+                                              <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                              <span>Logout</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="/login" id = "login" name="login">
+                                              <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                              <span>Register/Login</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+
+                          <ul class="header-dropdown">
+                              <li>
+                                  <a href="#">
+                                      <i class="icon icon-header icon-cart"></i>
+                                      <span>My Cart</span>
+                                  </a>
+
+                                  <ul>
+                                      <li>
+                                          <a href="#" onclick="myFunction()">
+                                              <span>View Cart</span>
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="#" onclick="checkout()">
+                                              <span>Checkout</span>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+
+                          <ul class="header-dropdown">
+                              <li>
+                                  <a href="#" title="Currency">
+                                      <i class="icon icon-header icon-globe"></i>
+                                      <span>Currency</span>
+                                  </a>
+
+                                  <ul>
+                                      <li>
+                                          <a href="#">
+                                              <i class="icon icon-dropdown icon-currency"></i>
+                                              <span>Currency</span>
+                                          </a>
+
+                                          <ul>
+                                              <li><a href="#">Us Dollar</a></li>
+                                              <li><a href="#">Euro</a></li>
+                                              <li><a href="#">Pound St</a></li>
+                                              <li><a href="#">Yuan</a></li>
+
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div><!-- End .dropdowns-wrapper -->
+                  </div><!-- End .dropdowns-container -->
+
+              </div><!-- End .container-fluid -->
+          </header><!-- End .header -->
+            <div class="main">
+                <div class="page-header custom larger mb60">
+                    <div class="container-fluid">
+                        <h1>Login or Register</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="/index">Home</a></li>
+                            <li class="active">Login or Register</li>
+                        </ol>
+                    </div><!-- End .container-fluid -->
+                </div><!-- End .page-header -->
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row row-lg">
+                                <div class="col-sm-6">
+                                    <h2>NEW CUSTOMER</h2>
+
+                                    <div>
+										 <p> Want to shop with us?</p>
+
+                                    <a href="/Register" class="btn btn-custom">CREATE AN ACCOUNT</a><br>
+									</div>
+                  <div>
+                    <p></p>
+                  </div>
+									<div>
+									<p>Would you like to become a Seller?</p>
+
+									<a href="/RegisterSeller" class="btn btn-custom">BECOME A SELLER</a>
+									</div>
+                                </div><!-- End .col-sm-6 -->
+
+                                <div class="mb60 visible-xs"></div><!-- margin -->
+
+                                <div class="col-sm-6">
+                                    <h2>REGISTERED CUSTOMERS</h2>
+                                    <div class="registered-customer-section">
+                                        <p>If you have an account with us, please log in.</p>
+
+                                      <!--  <form method="POST" action="UserLogin">-->
+
+                                            <div class="form-group label-overlay">
+                                                <input type="email" class="form-control" name="emailID" id = "emailID" required>
+                                                <label class="input-desc"><i class="icon input-icon input-email"></i>Enter your email <span class="input-required">*</span></label>
+                                            </div><!-- End .form-group -->
+                                            <div class="form-group label-overlay">
+                                                <input type="password" class="form-control" name="password" id = "password" required>
+                                                <label class="input-desc"><i class="icon input-icon input-password"></i>Enter your password <span class="input-required">*</span></label>
+                                            </div><!-- End .form-group -->
+
+                                            <div class="mb20"></div><!-- margin -->
+
+                                            <div class="form-action">
+                                                <button id="addUser"  onclick="addUser()" class="btn btn-custom" >  LOGIN</button>
+                                                <a href="ForgotPassword" class="forget-link">Forgot Your Password?</a>
+                                            </div><!-- End .form-action -->
+
+                                        <!--</form>-->
+                                        <!--<form method="GET" action="UserLogout">
+                                          <div class="form-action">
+                                              <button type="submit" class="btn btn-custom" >  LOGOUT</button>
+                                          </div><!-- End .form-action -->
+                                        <!--</form>-->
+                                    </div><!-- End .registered-customer-section -->
+                                </div><!-- End .col-sm-6 -->
+                            </div><!-- End .row -->
+                        </div><!-- End .col-md-9 -->
+
+                        <div class="mb100 visible-sm visible-xs"></div><!-- margin -->
+
+                        <aside class="col-md-3 sidebar">
+
+                            <div class="widget">
+                                </div><!-- end .swiper-container -->
+                            </div><!-- End .widget -->
+
+                        </aside>
+                    </div><!-- End .row -->
+                </div><!-- End .container-fluid -->
+                <div class="mb80 visible-md visible-lg"></div><!-- margin -->
+            </div><!-- End .main -->
+
+                <footer class="footer footer2">
+                    <div class="footer-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Your Profile</h4>
+                                        <ul class="links">
+                                            <li><a href="/MyDashboard">Dashboard</a></li>
+                                            <li><a href="/PersonalInformation">Account</a></li>
+                                            <li><a href="/MyOrders">Orders</a></li>
+                                            <li><a href="/MySavedCards">Saved Cards</a></li>
+                                        </ul>
+                                    </div><!-- End .widget -->
+                                </div><!-- End .col-md-3 -->
+
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Follow Us</h4>
+    
+                                        <div class="social-icons smaller">
+                                            <a href="#" class="social-icon icon facebook" title="Facebook"><span class="sr-only">Facebook</span></a>
+                                            <a href="#" class="social-icon icon twitter" title="Twitter"><span class="sr-only">Twitter</span></a>
+                                            <a href="#" class="social-icon icon instagram" title="Instagram"><span class="sr-only">Instagram</span></a>
+                                            <a href="mailto:rateMe.16@gmail.com" class="social-icon icon email" title="Email"><span class="sr-only">Email</span></a>
+                                        </div><!-- End .social-icons -->
+                                    </div><!-- End .widget -->
+                                </div><!-- End .col-md-3 -->
+
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="widget">
+                                        <h4 class="widget-title">Contact Us</h4>
+                                        <ul class="links">
+                                            <li><a href="#">Help &amp; Support</a></li>
+                                            <li><a href="#">FAQs</a></li>
+                                        </ul>
+                                    </div><!-- End .widget -->
+                                </div><!-- End .col-md-3 -->
+
+                                <div class="col-sm-6 col-md-3">
+                                        <div class="widget newsletter-widget">
+                                            <h4 class="widget-title">Copyright</h4>
+                                            <p>RateMe © 2018</p>
+                                            <p>All Rights Reserved. Except as permitted by the copyright law applicable to you, you may not reproduce or communicate any of the content on this website, including files downloadable from this website, without the permission of the copyright owner.</p>
+                                        </div><!-- End .widget -->
+                                    </div><!-- End .col-md-3 -->
+                                    
+                            </div><!-- End .row -->
+                        </div><!-- End .container -->
+                    </div><!-- End .footer-inner -->
+
+                    <div class="footer-bottom text-center">
+                        <div class="container">
+                            <img src="assets/images/ffs-logo-final-footer.png" alt="RateMe" class="footer-logo">
+                            <div class="payment-info">
+                                <p>Coming up</p>
+                                <p>Easy returns. Free shipping on orders over $50</p>
+                                <img src="assets/images/cards.png" alt="Payment methods">
+                            </div><!-- End .payment-info -->
+
+                        </div><!-- End .container -->
+                    </div><!-- End .footer-bottom -->
+                </footer><!-- End .footer -->
+
+            </div><!-- End #wrapper -->
+
+        <!-- End -->
+        <script src="assets/js/plugins.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+
+
+        <script>
+             $( document ).ready(function() {
+                var request = $.ajax({
+                url:  "/UserLogin",
+                type: "POST"
+              });
+            });
+                  </script>
+                  <script>
+                  $( document ).ready(function() {
+                    $("#logout").hide();
+                    $("#account").hide();
+                    $("#orders").hide();
+                    $("#cards").hide();
+                    $("#login").show();
+                    var request = $.ajax({
+                      url:  "/checkuserlogin",
+                      type: "GET",
+                      success: function(result) {
+                        console.log('user is logged in' + result);
+                        if(result=='true')
+                        {
+                          $("#logout").show();
+                          $("#account").show();
+                          $("#orders").show();
+                          $("#cards").show();
+                          $("#login").show();
+                        }
+                      }
+                    });
+                  });
+                  </script>
+
+
+                  <script>
+                  function addUser() {
+                      var request = $.ajax({
+                       url:  "/UserLogin",
+                       type: "POST",
+                             data: {
+                         emailID : $("#emailID").val(),
+                       password:$("#password").val()
+                      },
+                    success: function(result) {
+
+                      console.log(result);
+                      if(result=='notpresent'){
+                        alert('Please Enter Valid emailID');
+                        window.location.href = "/login";
+                      }else if(result=='passwordincorrect'){
+                        alert('Password Incorrect');
+                        window.location.href = "/login";
+                      }
+                      else{
+                       if(result=='buyer'){
+                        window.location.href = "/index";
+                      }
+                      else if(result=='admin'){
+                        console.log('----------------------------------------');
+                        window.location.href = "/AdminDashboard";
+                      }
+                      else{
+                        window.location.href = "/SellerDashboard";
+                      }
+                    }
+                          }
+                      });
+                    }
+                  </script>
+
+      <script>
+      function myFunction() {
+          var request = $.ajax({
+            url:  "/ViewCart",
+            type: "GET",
+            success: function(result) {
+              if(result=='notloggedin'){
+              alert("Please log in");
+          }
+        }
+      });
+      }
+
+      function checkout() {
+          var request = $.ajax({
+            url:  "/CartCheckout",
+            type: "GET",
+            success: function(result) {
+              if(result=='notloggedin'){
+              alert("Please log in");
+          }
+        }
+      });
+      }
+     </script>
+
+    </body>
+</html>

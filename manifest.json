@@ -1,0 +1,8 @@
+{
+  "runtime":{
+    "majorVersion":"8"
+  },
+  "command": "node RateMe/app.js",
+  "release": {},
+  "notes": "Online review/rating application on Oracle Cloud"
+}

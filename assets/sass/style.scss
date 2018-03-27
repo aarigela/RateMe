@@ -1,0 +1,184 @@
+/* 
+Template Name : Sconto - Premium eCommerce Template
+Template URI  : #
+Description   : Premium ecommerce HTML Template
+
+-------- Table Of Contents --------- //
+-------- 1-  General
+-------- 2-  Typography
+-------- 3-  Elements
+--------- 3.1-  Pageheaders
+--------- 3.2-  Collapses
+--------- 3.3-  Tabs
+--------- 3.4-  Buttons
+--------- 3.5-  Forms
+--------- 3.6-  Progressbars
+--------- 3.7-  Pagination
+--------- 3.8-  Social Icons
+--------- 3.9-  More
+-------- 4-  Headers
+-------- 5-  Homepages
+--------- 5.1-  Sliders
+--------- 5.2-  Homepage 1
+--------- 5.3-  Homepage 2
+--------- 5.4-  Homepage 3
+--------- 5.5-  Homepage 4
+--------- 5.6-  Homepage 5
+--------- 5.7-  Homepage 6
+--------- 5.8-  Homepage 7
+-------- 6-  About
+-------- 7-  Blog
+-------- 8-  Portfolio
+-------- 9-  Category
+-------- 10- Product
+-------- 11- Cart
+-------- 12- Compare
+-------- 13- Checkout
+-------- 14- Contact
+-------- 15- 404
+-------- 16- Login
+-------- 17- FaQs 
+-------- 18- Swiper Slider
+-------- 19- Footers
+-------- 20- Coming Soon
+-------- End Table Of Contents ---- //
+*/
+
+@import 'mixins';
+@import 'variables';
+@import 'sprites';
+
+
+/* ----------- 1.General --------------
+--------------------------------------*/
+@import 'general';
+
+
+/* ----------- 2.Typography -----------
+--------------------------------------*/
+@import 'typography';
+
+
+/* ----------- 3.Elements ------------
+--------------------------------------*/
+@import 'elements/pageheaders';
+@import 'elements/collapses';
+@import 'elements/tabs';
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/progressbars';
+@import 'elements/pagination';
+@import 'elements/social-icons';
+@import 'elements/more';
+
+
+/* ----------- 4.Headers ---------------
+--------------------------------------*/
+@import 'headers';
+
+
+/* ----------- 5.Homepages -------------
+--------------------------------------*/
+/* Sliders - Revolution Sliders Custom Styles */
+@import 'homepages/sliders';
+
+/* Homepage - Index.html */
+@import 'homepages/homepage';
+
+/* Homepage 2 - Index2.html */
+@import 'homepages/homepage2';
+
+/* Homepage 3 - Index3.html */
+@import 'homepages/homepage3';
+
+/* Homepage 4 - Index4.html */
+@import 'homepages/homepage4';
+
+/* Homepage 5 - Index5.html */
+@import 'homepages/homepage5';
+
+/* Homepage 7 - Index7.html */
+@import 'homepages/homepage7';
+
+/* Banners */
+@import 'banners';
+
+
+/* ----------- 6.About -----------------
+--------------------------------------*/
+@import 'about';
+
+
+/* ----------- 7.Blog -----------------
+--------------------------------------*/
+@import 'blog';
+/* Single - Blog Post */
+@import 'single';
+
+
+/* ----------- 8.Portfolio -------------
+--------------------------------------*/
+@import 'portfolio';
+/*Single Portfolio*/
+@import 'single-portfolio';
+
+
+/* ----------- 9.Category(Shop) - Products
+--------------------------------------*/
+@import 'products';
+@import 'category';
+
+
+/* ----------- 10.Product - Single Product
+--------------------------------------*/
+@import 'product';
+
+
+/* ----------- 11.Cart Page ----------
+--------------------------------------*/
+@import 'cart';
+
+
+/* ----------- 12.Compare ---------------
+--------------------------------------*/
+@import 'compare';
+
+
+/* ----------- 13.Checkout Page ----------
+--------------------------------------*/
+@import 'checkout';
+
+
+/* ----------- 14.Contact Page ----------
+--------------------------------------*/
+@import 'contact';
+
+
+/* ----------- 15.404 Page --------------
+--------------------------------------*/
+@import '404';
+
+
+/* ----------- 16.Login Page --------------
+--------------------------------------*/
+@import 'login';
+
+
+/* ---------- 17.FaQS Page --------------
+--------------------------------------*/
+@import 'faqs';
+
+
+/* ----------- 18.Swiper ---------------
+--------------------------------------*/
+@import 'swiper';
+
+
+/* ----------- 19.Footers ---------------
+--------------------------------------*/
+@import 'footers';
+
+
+/* ---------- 20.Coming Soon --------------
+--------------------------------------*/
+@import 'coming-soon';

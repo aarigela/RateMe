@@ -1,0 +1,207 @@
+/* More Elements */
+
+/* Bootstrap Carousel */
+.carousel {
+	.item {
+		img {
+			max-width:none;
+			width:100%;
+		}
+
+		.carousel-caption {
+			font-size: 15px;
+			text-shadow: none;
+			padding-bottom:20px;
+			color: #444;
+		}
+	}
+}
+
+.carousel-control {
+	top: 50%;
+	bottom: auto;
+	width: 45px;
+	height:45px;
+	margin-top:-22.5px;
+	font-size: 18px;
+	line-height: 45px;
+	opacity:1;
+	border-radius: 50%;
+	border: 2px solid #444444;
+	text-shadow:none;
+	z-index:190;
+	transition: background-color 0.4s, border-color 0.4s;
+	
+	/* Hide for Portfolio item for smaller than 480px screen */
+	.portfolio-item & {
+		@media (max-width: 480px) {
+			display:none;
+		}
+	}
+
+	&.light {
+		border-color: #fff;
+
+		&.left {
+			@include sprite-position($slider-prev-hover);
+		}
+
+		&.right {
+			@include sprite-position($slider-next-hover);
+		}
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $first-color;
+		background-color: $first-color;
+	}
+
+	&.left {
+		left:40px;
+		@include sprite-position($slider-prev);
+
+		&:hover,
+		&:focus {
+			@include sprite-position($slider-prev-hover);
+		}
+	}
+
+	&.right {
+		right:40px;
+		@include sprite-position($slider-next);
+
+		&:hover,
+		&:focus {
+			@include sprite-position($slider-next-hover);
+		}
+	}
+
+	&.big {
+		width:55px;
+		height:55px;
+		margin-top: -27.5px;
+
+		&.light {
+			&.left {
+				@include sprite-position($carousel-big-prev-hover);
+			}
+
+			&.right {
+				@include sprite-position($carousel-big-next-hover);
+			}
+		}
+
+		&.left {
+			left:30px;
+			@include sprite-position($carousel-big-prev);
+
+			&:hover,
+			&:focus {
+				@include sprite-position($carousel-big-prev-hover);
+			}
+		}
+
+		&.right {
+			right: 30px;
+			@include sprite-position($carousel-big-next);
+
+			&:hover,
+			&:focus {
+				@include sprite-position($carousel-big-next-hover);
+			}
+		}
+	}
+}
+
+.carousel-indicators {
+	bottom: 20px;
+	line-height:0;
+
+	li {
+		width: 11px;
+  		height: 11px;
+  		margin:0 4px;
+  		border:2px solid #444444;
+  		background-color: transparent;
+  		transition: all 0.4s;
+
+  		&:hover,
+  		&:focus {
+			border-color: $first-color;
+  		}
+
+  		&.active {
+			width: 11px;
+	  		height: 11px;
+	  		margin:0 4.5px;
+	  		background-color: $first-color;
+	  		border-color: $first-color;
+		}
+	}
+	
+	
+}
+
+
+/* Bootstrap Tooltip */
+.tooltip {
+	font-family: $font-family;
+	font-size:13px;
+	letter-spacing: 0.4px;
+}
+
+.tooltip-inner {
+	 padding: 3px 8px;
+	 border-radius:0;
+	 border-radius: 4px;
+}
+
+
+/* Bootstrap Modal*/
+.modal {
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.modal-dialog {
+	@media (min-width: 768px) {
+		width:480px;
+
+		&.modal-sm {
+			width:360px;
+		}
+	}
+}
+
+.modal-content {
+	border: none;
+	border-radius: 0;
+
+	.modal-header {
+		background-color: $first-color;
+		border:none;
+
+		.modal-title {
+			color :#fff;
+		}
+
+		.close {
+			margin-top:2px;
+		}
+	}
+}
+
+.modal-body {
+	.form-group {
+		&:last-child {
+			&,
+			.form-control {
+				margin-bottom:6px;
+			}
+		}
+	}
+}
+
+.modal-footer {
+	padding:10px 15px;
+}

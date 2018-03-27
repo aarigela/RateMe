@@ -1,0 +1,647 @@
+<!--Page to view/update/delete books of a particular seller -->
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>RateMe</title>
+        <meta name="description" content="Premium eCommerce Template">
+
+        <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/ffs-favicon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/ffs-favicon.png">
+
+        <link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300' rel='stylesheet' type='text/css'>
+
+        <!-- Fira Sans Fix - Google Fira Sans sometimes fails to load -->
+        <link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="assets/css/plugins.min.css">
+        <link rel="stylesheet" href="assets/css/settings.css">
+        <link rel="stylesheet" href="assets/css/navigation.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header class="header sticky-header border-less border-gray">
+                <div class="container-fluid">
+                    <div class="logo">
+                        <a href="/" title="RateMe">
+                            <img src="assets/images/ffs-logo-final.png" alt="RateMe">
+                        </a>
+                    </div><!-- End .logo -->
+
+                    <nav class="menu-container">
+                        <ul class="menu">
+                            <li><a href="#">Books</a>
+                                <ul>
+                                    <li><a href="#">Arts</a></li>
+                                    <li><a href="#">Business</a>
+                                        <ul>
+                                            <li><a href="category.html">Category</a></li>
+                                            <li><a href="category-2col.html">Two Columns</a></li>
+                                            <li><a href="category-3col.html">Three Columns</a></li>
+                                            <li><a href="category-left-sidebar.html">Category - Left Sidebar</a></li>
+                                            <li><a href="category-left-sidebar-2col.html">Left Sidebar Two Col</a></li>
+                                            <li><a href="category-left-sidebar-3col.html">Left Sidebar Three Col</a></li>
+                                            <li><a href="category-fullwidth-3col.html">Fullwidth Three Col</a></li>
+                                            <li><a href="category-fullwidth-4col.html">Fullwidth Four Col</a></li>
+                                            <li><a href="category-fullwidth-5col.html">Fullwidth Five Col</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Children's Books</a>
+                                        <ul>
+                                            <li><a href="category-list.html">Category List</a></li>
+                                            <li><a href="category-list-left-sidebar.html">List - Left Sidebar</a></li>
+                                            <li><a href="category-list-right-sidebar.html">List - Right Sidebar</a></li>
+                                            <li><a href="category-list-box.html">Category ListBox</a></li>
+                                            <li><a href="category-list-box-left-sidebar.html">ListBox - Left Sidebar</a></li>
+                                            <li><a href="category-list-box-right-sidebar.html">ListBox - Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Computers & Technology</a>
+                                        <ul>
+                                            <li><a href="product.html">Product Version 1</a></li>
+                                            <li><a href="product2.html">Product Version 2</a></li>
+                                            <li><a href="product3.html">Product Version 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="cart.html">Food & Drinks</a></li>
+                                    <li><a href="compare.html">History</a></li>
+                                    <li><a href="checkout.html">Literature & Fiction</a></li>
+                                    <li><a href="#">Medical Books</a>
+                                        <ul>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="contact2.html">Contact Us 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="404.html">Religion & Spirituality</a></li>
+                                    <li><a href="login.html">Romance</a></li>
+                                    <li><a href="register.html">Science & Math</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="mobile-menu">
+                            <li><a href="#">Books</a>
+                                <ul>
+                                    <li><a href="#">Arts</a></li>
+                                    <li><a href="#">Business</a>
+                                        <ul>
+                                            <li><a href="category.html">Category</a></li>
+                                            <li><a href="category-2col.html">Two Columns</a></li>
+                                            <li><a href="category-3col.html">Three Columns</a></li>
+                                            <li><a href="category-left-sidebar.html">Category - Left Sidebar</a></li>
+                                            <li><a href="category-left-sidebar-2col.html">Left Sidebar Two Col</a></li>
+                                            <li><a href="category-left-sidebar-3col.html">Left Sidebar Three Col</a></li>
+                                            <li><a href="category-fullwidth-3col.html">Fullwidth Three Col</a></li>
+                                            <li><a href="category-fullwidth-4col.html">Fullwidth Four Col</a></li>
+                                            <li><a href="category-fullwidth-5col.html">Fullwidth Five Col</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Children's Books</a>
+                                        <ul>
+                                            <li><a href="category-list.html">Category List</a></li>
+                                            <li><a href="category-list-left-sidebar.html">List - Left Sidebar</a></li>
+                                            <li><a href="category-list-right-sidebar.html">List - Right Sidebar</a></li>
+                                            <li><a href="category-list-box.html">Category ListBox</a></li>
+                                            <li><a href="category-list-box-left-sidebar.html">ListBox - Left Sidebar</a></li>
+                                            <li><a href="category-list-box-right-sidebar.html">ListBox - Right Sidebar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Computers & Technology</a>
+                                        <ul>
+                                            <li><a href="product.html">Product Version 1</a></li>
+                                            <li><a href="product2.html">Product Version 2</a></li>
+                                            <li><a href="product3.html">Product Version 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="cart.html">Food & Drinks</a></li>
+                                    <li><a href="compare.html">History</a></li>
+                                    <li><a href="checkout.html">Literature & Fiction</a></li>
+                                    <li><a href="#">Medical Books</a>
+                                        <ul>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="contact2.html">Contact Us 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="404.html">Religion & Spirituality</a></li>
+                                    <li><a href="login.html">Romance</a></li>
+                                    <li><a href="register.html">Science & Math</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-search-container search-dropdown-fix">
+                        <a href="#" class="search-dropdown-btn" title="Search Form">
+                            <i class="icon icon-header-search"></i>
+                        </a>
+
+                        <form action="#" class="header-search-form">
+                            <div class="dropdown search-dropdown">
+                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    All Categories
+                                    <i class="icon icon-search-arrow"></i>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Computers</a></li>
+                                    <li><a href="#">Software</a></li>
+                                    <li><a href="#">Televisions</a></li>
+                                    <li><a href="#">Audio &amp; Video</a></li>
+                                    <li><a href="#">Cell Phones</a></li>
+                                    <li><a href="#">home appliance</a></li>
+                                    <li><a href="#">Cameras &amp; Photo</a></li>
+                                    <li><a href="#">Featured Sales</a></li>
+                                    <li><a href="#">Liquidations</a></li>
+                                </ul><!-- End .dropdown -->
+                            </div><!-- End .dropdown -->
+                            <input type="search" class="form-control" required>
+                            <button type="submit" class="btn">
+                                <i class="icon icon-header-search"></i>
+                            </button>
+                        </form>
+                    </div><!-- End .header-search-container -->
+
+                    <div class="dropdowns-container">
+                        <button type="button" class="navbar-toggle">
+                            <span class="toggle-wrapper">
+                                <span class="toggle-text">Menu</span>
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </span>
+                        </button>
+                        <div class="dropdowns-wrapper">
+                            <ul class="header-dropdown account-dropdown">
+                                <li>
+                                    <a href="/SellerDashboard" title="Currency/Language">
+                                        <i class="icon icon-header icon-user"></i>
+                                        <span>MY DASHBOARD</span>
+                                    </a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="/SellerDashboard">
+                                                <i class="icon icon-dropdown icon-dropdown-user"></i>
+                                                <span>MY DASHBOARD</span>
+                                            </a>
+                                        </li>
+                                      
+                                        <li>
+                                          <a href="/UserLogout" id = "logout" name="logout">
+                                              <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                              <span>Logout</span>
+                                          </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <ul class="header-dropdown">
+                                <li>
+                                    <a href="#" title="Currency">
+                                        <i class="icon icon-header icon-globe"></i>
+                                        <span>Currency</span>
+                                    </a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon icon-dropdown icon-currency"></i>
+                                                <span>Currency</span>
+                                            </a>
+
+                                            <ul>
+                                                <li><a href="#">Us Dollar</a></li>
+                                                <li><a href="#">Euro</a></li>
+                                                <li><a href="#">Pound St</a></li>
+                                                <li><a href="#">Yuan</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!-- End .dropdowns-wrapper -->
+                    </div><!-- End .dropdowns-container -->
+
+                </div><!-- End .container-fluid -->
+            </header><!-- End .header -->
+
+            <div class="mb30"></div><!-- margin -->
+
+            <div class="main">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-9 col-md-push-3">
+
+                            <div class="mb35 mb20-sm"></div><!-- margin -->
+
+                            <div class="products-tab" role="tabpanel">
+                                <!-- Nav tabs -->
+
+                                <!-- Tab Panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="tab-latest">
+                                        <div class="row product-container-row">
+                                            <div class="products-container max-col-3" data-layoutmode="fitRows">
+
+                                              <!--START OF BOOKS Management TABLE -->
+                                            <div class="main">
+                                              <div class="page-header">
+                                                <div class="container-fluid">
+                                                  <ol class="breadcrumb">
+                                                    <li><a href="/">Home</a></li>
+                                                    <li class="active"><a href="/SellerDashboard">MY DASHBOARD</a></li>
+                                                    <li class="active"><a href="/ManageBooks">INVENTORY MANAGEMENT - MANAGE BOOKS</a></li>
+                                                  </ol>
+                                                </div><!-- End .container-fluid -->
+                                                </div><!-- End .page-header -->
+                                                  <div class="container-fluid">
+                                                    <div class="row">
+                                                      <div class="col-md-11">
+                                                        <div class="table-responsive">
+                                                          <table class="table table-bordered cart-table" id="booksTable" name="booksTable">
+                                                          </table>
+                                                        </div><!-- End .table-responsive -->
+                                                      </div><!-- End .col-md-9 -->
+                                                    </div><!-- End .row -->
+                                                  </div><!-- End .container-fluid -->
+                                                </div><!-- End .main -->
+                                              <!--END OF BOOKS Management TABLE -->
+                                            </div><!-- End .product-container-->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .tab-pane -->
+                                </div><!-- End .swiper-wrapper -->
+                            </div><!-- End .swiper-container -->
+                        </div><!-- End .col-md-9 -->
+
+                        <aside class="col-md-3 col-md-pull-9 sidebar">
+
+                            <div class="widget widget-category">
+                                <h3 class="widget-title">
+                                    MY DASHBOARD
+                                    <i class="icon cat-title-icon"></i>
+                                </h3>
+                                <ul class="category-list">
+                                  <li>
+                                    <a data-toggle="collapse" href="#collapse1">INVENTORY MANAGEMENT</a>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div><a href="/ManageBooks">Manage Books</a></div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <a data-toggle="collapse" href="#collapse2">GENERATE REPORTS</a>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div><a href="/BooksReport">My Books</a></div>
+                                    </div>
+                                  </li>
+                                </ul>
+                            </div><!-- End .widget -->
+
+                        </aside>
+
+                    </div><!-- End .row -->
+                </div><!-- End .container-fluid -->
+            </div><!-- End .main -->
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+            <br><br><br><br>
+
+            <footer class="footer footer2">
+                <div class="footer-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Your Profile</h4>
+                                    <ul class="links">
+                                        <li><a href="#">Account</a></li>
+                                        <li><a href="#">Sign Out</a></li>
+                                    </ul>
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Follow Us</h4>
+
+                                    <div class="social-icons smaller">
+                                        <a href="#" class="social-icon icon facebook" title="Facebook"><span class="sr-only">Facebook</span></a>
+                                        <a href="#" class="social-icon icon twitter" title="Twitter"><span class="sr-only">Twitter</span></a>
+                                        <a href="#" class="social-icon icon instagram" title="Instagram"><span class="sr-only">Instagram</span></a>
+                                        <a href="mailto:rateMe.16@gmail.com" class="social-icon icon email" title="Email"><span class="sr-only">Email</span></a>
+                                    </div><!-- End .social-icons -->
+                                </div><!-- End .widget -->
+                            </div><!-- End .col-md-3 -->                            
+
+                            <div class="col-sm-6 col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">Contact Us</h4>
+                                    <ul class="links">
+                                        <li><a href="#">Help &amp; Support</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                    </ul>
+                                </div><!-- End .widget -->                                
+                            </div><!-- End .col-md-3 -->
+
+                        </div><!-- End .row -->
+                    </div><!-- End .container -->
+                </div><!-- End .footer-inner -->
+
+                <div class="footer-bottom text-center">
+                    <div class="container">
+                        <img src="assets/images/ffs-logo-final-footer.png" alt="RateMe" class="footer-logo">
+                        <div class="payment-info">
+                            <p>Coming up</p>
+                            <p>Easy returns. Free shipping on orders over $50</p>
+                            <img src="assets/images/cards.png" alt="Payment methods">
+                        </div><!-- End .payment-info -->
+
+                    </div><!-- End .container -->
+                </div><!-- End .footer-bottom -->
+            </footer><!-- End .footer -->
+
+        </div><!-- End #wrapper -->
+
+        <!-- End -->
+        <script src="assets/js/plugins.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+        <script>
+
+        //Function to display all the current books of a particular seller from the database
+        //Pre-conditions   -> Seller clicks on MAnage Books link from Inventory Management section of seller Dashboard
+        //Post-conditions  -> All the current books of the seller are displayed from the database
+        $( document ).ready(function()
+        {
+            var request = $.ajax
+            ({
+                url:  "/sellerbooklist",
+                type: "POST",
+
+                success: function(data)
+                {
+                    var r = new Array(), j = -1;
+                    var jsonData = JSON.parse(data);
+                    r[++j] = '<thead>'
+                    r[++j] =   '<tr>'
+                    r[++j] =     '<th class="product-col">Select Product</th>'
+                    r[++j] =   '<th class="code-col">Book ID</th>'
+                    r[++j] =   '  <th class="price-col">Book Name</th>'
+                    r[++j] =    '<th class="product-col">Author</th>'
+                    r[++j] =     '<th class="code-col">Quantity Available</th>'
+                    r[++j] =     '<th class="code-col">Price</th>'
+                    r[++j] =     '<th class="code-col">Category</th>'
+                    r[++j] =     '<th class="code-col">ISBN</th>'
+                    r[++j] =   '</tr>'
+                    r[++j] =   '</thead>'
+
+                    for (var i = 0; i < jsonData.length; i++) {
+                      var counter = jsonData[i];
+
+                   r[++j] ='<tr><td>';
+                   r[++j] = '<input id="bookId" name="bookId" type="radio" value="'+jsonData[i].bookId+'">';
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].bookId;
+                   r[++j] ='<td class="">';
+                   r[++j] = jsonData[i].bookName;
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].author;
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].quantity;
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].price;
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].category;
+                   r[++j] = '</td><td class="">';
+                   r[++j] = jsonData[i].isbn;
+                   r[++j] = '</td></tr>';
+               }
+
+               r[++j] ='<tr><td></td><td><div class="row">'
+               r[++j] ='<div class="col-xs-6 col-lg-4">'
+               r[++j] ='<a href="/addbookpage" class="btn btn-custom min-width">ADD BOOK</a>'
+               r[++j] ='</div></td><td><!-- End .col-lg-8-->'
+               r[++j] ='<div class="mb50 clearfix hidden-lg"></div><!-- margin -->'
+               r[++j] ='<div class="col-xs-6 col-lg-4">'
+               r[++j] ='<button id="modifyBook" class="btn btn-custom min-width" onclick="modifyBookFunction()">MODIFY BOOK</a>'
+               r[++j] ='</div></td><!-- End .col-lg-8-->'
+               r[++j] ='</div><!-- End .row -->'
+               r[++j] ='<div class="mb50 clearfix hidden-lg"></div><!-- margin -->'
+               r[++j] ='<div class="col-xs-6 col-lg-4">'
+               r[++j] ='<td><button id="deleteBook" class="btn btn-danger min-width " onclick="deleteBookFunction()">REMOVE</button>'
+               r[++j] ='</div></td></tr><!-- End .col-lg-8-->'
+               r[++j] ='</div><!-- End .row -->'
+
+               $('#booksTable').html(r.join(''));
+            }
+
+          });// rend request
+        }); //  end ready
+
+        //Function to update book information of a seller to the database
+        //Pre-conditions   -> Seller selects a particular book from the table and clicks on Modify Book button
+        //Post-conditions  -> Seller is routed to InventoryModifyBooks.html page along with the selected book information
+        function modifyBookFunction()
+        {
+            var request = $.ajax
+            ({
+                url:  "/setbookid",
+                type: "POST",
+                data:
+                {
+                  bookId: $("input[name='bookId']:checked").val()
+                },
+                success: function(res)
+                {
+                  window.location.href = "/editbook";
+                }
+            });
+        }// end modify click
+
+        //Function to delte selected book from the database
+        //Pre-conditions   -> Seller selects radio button corrosponding to a book in the table and  Clicks on Remove button
+        //Post-conditions  -> All the details of the selected book are deleted from the database
+        function deleteBookFunction()
+        {
+            var request = $.ajax
+            ({
+                url:  "/deletebook",
+                type: "DELETE",
+                data:
+                {
+                   bookId: $("input[name='bookId']:checked").val()
+                },
+                success: function(res)
+                {
+                   alert('Book Information Deleted Successfully');
+                   window.location.href = "/managebooks";
+                }
+            });
+        }// end delete click
+
+        //Function to route seller to add a new book to the database
+        //Pre-conditions   -> Seller clicks on Add button from ManageBooks.html page
+        //Post-conditions  -> Seller routed to InventoryAddBooks.html
+        function addBook()
+        {
+              var request = $.ajax
+              ({
+                  url:  "/addbookpage",
+                  type: "GET",
+                  success: function(res)
+                  {
+                      window.location.href = "/addbookpage";
+                  }
+              });
+        }
+        </script>
+
+        <!-- REVOLUTION JS FILES -->
+        <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+        (Load Extensions only on Local File Systems !
+        The following part can be removed on Server for On Demand Loading) -->
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.migration.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="assets/js/extensions/revolution.extension.video.min.js"></script>
+
+        <script type="text/javascript">
+            (function() {
+                "use strict";
+
+                $(document).ready(function() {
+                    var revapi;
+                    if ($("#rev_slider").revolution == undefined) {
+                        revslider_showDoubleJqueryError("#rev_slider");
+                    } else {
+                        revapi = $("#rev_slider").show().revolution({
+                            sliderType:"standard",
+                            jsFileLocation:"assets/js/",
+                            sliderLayout:"auto",
+                            dottedOverlay:"none",
+                            delay:10000,
+                            disableProgressBar: "on",
+                            navigation: {
+                                keyboardNavigation: "on",
+                                keyboard_direction: "horizontal",
+                                mouseScrollNavigation: "off",
+                                onHoverStop: "off",
+                                touch: {
+                                    touchenabled: "on",
+                                    swipe_threshold: 75,
+                                    swipe_min_touches: 1,
+                                    swipe_direction: "horizontal",
+                                    drag_block_vertical: false
+                                },
+                                arrows: {
+                                    style: "custom",
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    hide_under: 768,
+                                    hide_onleave: false,
+                                    tmp: '',
+                                    left: {
+                                        h_align: "left",
+                                        v_align: "center",
+                                        h_offset: 20,
+                                        v_offset: 0
+                                    },
+                                    right: {
+                                        h_align: "right",
+                                        v_align: "center",
+                                        h_offset: 20,
+                                        v_offset: 0
+                                    }
+                                },
+                                bullets: {
+                                    enable: true,
+                                    hide_onmobile: false,
+                                    hide_under: 767,
+                                    style: "custom",
+                                    hide_onleave: false,
+                                    direction: "horizontal",
+                                    h_align: "center",
+                                    v_align: "bottom",
+                                    h_offset: 0,
+                                    v_offset: 30,
+                                    space: 15
+                                }
+                            },
+                            viewPort: {
+                                enable:true,
+                                outof:"pause",
+                                visible_area:"80%"
+                            },
+                            responsiveLevels:[1800,1600,1200,992,767],
+                            gridwidth:[1350,800,720,720,480],
+                            gridheight:[800,640,520,520,240],
+                            lazyType:"single",
+                            parallax: {
+                                type:"mouse",
+                                origo:"slidercenter",
+                                speed:2000,
+                                levels:[2,3,4,5,6,7,12,16,10,50],
+                            },
+                            shadow:0,
+                            spinner:"on",
+                            stopLoop:"off",
+                            stopAfterLoops:-1,
+                            stopAtSlide:-1,
+                            shuffle:"off",
+                            autoHeight:"off",
+                            hideThumbsOnMobile:"off",
+                            hideSliderAtLimit:0,
+                            hideCaptionAtLimit:0,
+                            hideAllCaptionAtLilmit:0,
+                            debugMode:false,
+                            fallbacks: {
+                                simplifyAll:"off",
+                                nextSlideOnWindowFocus:"off",
+                                disableFocusListener:false,
+                            }
+                        });
+
+
+                        $("#rev_slider").bind("revolution.slide.onloaded",function (e) {
+                            BackgroundCheck.init({
+                                targets: '.tparrows, .tp-bullets, .tp-caption',
+                                images: '.tp-bgimg'
+                            });
+                        });
+
+                        $("#rev_slider").bind("revolution.slide.onafterswap",function (e,data) {
+                            BackgroundCheck.refresh();
+                        });
+                    }
+                });
+
+            })();
+        </script>
+    </body>
+</html>

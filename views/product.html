@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie9"><![endif]-->
+<!--[if !IE]><!-->
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>RateMe</title>
+    <meta name="description" content="Premium eCommerce Template">
+
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicons/ffs-favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/ffs-favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/ffs-favicon.png">
+
+    <link href='http://fonts.googleapis.com/css?family=Hind:400,700,600,500,300%7CFira+Sans:400,700italic,500italic,400italic,300italic,700,500,300'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Fira Sans Fix - Google Fira Sans sometimes fails to load -->
+    <link href='http://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="assets/css/plugins.min.css">
+    <link rel="stylesheet" href="assets/css/settings.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="node_modules/jquery.rateit/scripts/rateit.css">
+
+</head>
+<body>
+<div id="wrapper">
+
+    <header class="header sticky-header border-less border-gray">
+
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/" title="RateMe">
+                    <img src="assets/images/ffs-logo-final.png" alt="RateMe">
+                </a>
+            </div>
+
+            <nav class="menu-container">
+                <ul class="menu">
+                    <li><a href="/" onclick="books()">Books</a>
+                        <ul>
+                            <li>
+                                <a href="/" onclick="goodreads()">Good Reads</a>
+                                <ul>
+                                    <li><a href="/" onclick="goodreads_children()">Children's Books</a></li>
+                                    <li><a href="/" onclick="goodreads_comics()">Comics</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_humor()">Humor & Entertainment</a></li>
+                                    <li><a href="/" onclick="goodreads_mystery()">Mystery, Thriller & Suspense</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_romance()">Romance</a></li>
+                                    <li><a href="/" onclick="goodreads_science()">Science Fiction & Fantasy</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_teen()">Teen & Young Adult</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/" onclick="knowledge()">Knowledge</a>
+                                <ul>
+                                    <li><a href="/" onclick="knowledge_business()">Business</a></li>
+                                    <li><a href="/" onclick="knowledge_computer()">Computers & Technology</a>
+                                    </li>
+                                    <li><a href="/" onclick="knowledge_education()">Education & Teaching</a></li>
+                                    <li><a href="/" onclick="knowledge_history()">History</a></li>
+                                    <li><a href="/" onclick="knowledge_law()">Law</a></li>
+                                    <li><a href="/" onclick="knowledge_literature()">Literature & Fiction</a></li>
+                                    <li><a href="/" onclick="knowledge_medical()">Medical Books</a>
+                                    </li>
+                                    <li><a href="/" onclick="knowledge_politics()">Politics & Social Sciences</a></li>
+                                    <li><a href="/" onclick="knowledge_references()">Reference</a></li>
+                                    <li><a href="/" onclick="knowledge_sciences()">Sciences & Mathematics</a></li>
+                                    <li><a href="/" onclick="knowledge_sports()">Sports</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/" onclick="lifestyle()">Lifestyle</a>
+                                <ul>
+                                    <li><a href="/" onclick="lifestyle_arts()">Arts & Photography</a>
+                                    </li>
+                                    <li><a href="/" onclick="lifestyle_biographies()">Biographies</a>
+                                    </li>
+                                    <li><a href="/" onclick="lifestyle_food()">Food & Drinks</a></li>
+                                    <li><a href="/" onclick="lifestyle_health()">Health</a></li>
+                                    <li><a href="/" onclick="lifestyle_lgbt()">LGBT</a></li>
+                                    <li><a href="/" onclick="lifestyle_parenthood()">Parenthood & Relationships</a></li>
+                                    <li><a href="/" onclick="lifestyle_philosophy()">Philosophy & Learning</a></li>
+                                    <li><a href="/" onclick="lifestyle_religion()">Religion & Spirituality</a></li>
+                                    <li><a href="/" onclick="lifestyle_travel()">Travel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="mobile-menu">
+                    <li><a href="/" onclick="books()">Books</a>
+                        <ul>
+                            <li>
+                                <a href="/" onclick="goodreads()">Good Reads</a>
+                                <ul>
+                                    <li><a href="/" onclick="goodreads_children()">Children's Books</a></li>
+                                    <li><a href="/" onclick="goodreads_comics()">Comics</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_humor()">Humor & Entertainment</a></li>
+                                    <li><a href="/" onclick="goodreads_mystery()">Mystery, Thriller & Suspense</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_romance()">Romance</a></li>
+                                    <li><a href="/" onclick="goodreads_science()">Science Fiction & Fantasy</a>
+                                    </li>
+                                    <li><a href="/" onclick="goodreads_teen()">Teen & Young Adult</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/" onclick="knowledge()">Knowledge</a>
+                                <ul>
+                                    <li><a href="/" onclick="knowledge_business()">Business</a></li>
+                                    <li><a href="/" onclick="knowledge_computer()">Computers & Technology</a>
+                                    </li>
+                                    <li><a href="/" onclick="knowledge_education()">Education & Teaching</a></li>
+                                    <li><a href="/" onclick="knowledge_history()">History</a></li>
+                                    <li><a href="/" onclick="knowledge_law()">Law</a></li>
+                                    <li><a href="/" onclick="knowledge_literature()">Literature & Fiction</a></li>
+                                    <li><a href="/" onclick="knowledge_medical()">Medical Books</a>
+                                    </li>
+                                    <li><a href="/" onclick="knowledge_politics()">Politics & Social Sciences</a></li>
+                                    <li><a href="/" onclick="knowledge_references()">Reference</a></li>
+                                    <li><a href="/" onclick="knowledge_sciences()">Sciences & Mathematics</a></li>
+                                    <li><a href="/" onclick="knowledge_sports()">Sports</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/" onclick="lifestyle()">Lifestyle</a>
+                                <ul>
+                                    <li><a href="/" onclick="lifestyle_arts()">Arts & Photography</a>
+                                    </li>
+                                    <li><a href="/" onclick="lifestyle_biographies()">Biographies</a>
+                                    </li>
+                                    <li><a href="/" onclick="lifestyle_food()">Food & Drinks</a></li>
+                                    <li><a href="/" onclick="lifestyle_health()">Health</a></li>
+                                    <li><a href="/" onclick="lifestyle_lgbt()">LGBT</a></li>
+                                    <li><a href="/" onclick="lifestyle_parenthood()">Parenthood & Relationships</a></li>
+                                    <li><a href="/" onclick="lifestyle_philosophy()">Philosophy & Learning</a></li>
+                                    <li><a href="/" onclick="lifestyle_religion()">Religion & Spirituality</a></li>
+                                    <li><a href="/" onclick="lifestyle_travel()">Travel</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-search-container">
+                <form id="searching" onclick="searchbar()" class="header-search-form">
+                    <input id="searchval" type="search" class="form-control">
+                    <button type="submit" class="btn">
+                        <i class="icon icon-header-search"></i>
+                    </button>
+                </form>
+            </div><!-- End .header-search-container -->
+
+            <div class="dropdowns-container">
+                <button type="button" class="navbar-toggle">
+                    <span class="toggle-wrapper">
+                        <span class="toggle-text">Menu</span>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </span>
+                </button>
+                <div class="dropdowns-wrapper">
+                    <ul class="header-dropdown account-dropdown">
+                        <li>
+                            <a href="/MyDashboard">
+                                <i class="icon icon-header icon-user"></i>
+                                <span>My Dashboard</span>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a href="/PersonalInformation">
+                                        <i class="icon icon-dropdown icon-dropdown-user"></i>
+                                        <span>My Account</span>
+                                    </a>
+                                </li>                                
+                                <li>
+                                    <a href="/UserLogout">
+                                        <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/login">
+                                        <i class="icon icon-dropdown icon-dropdown-lock"></i>
+                                        <span>Register/Login</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="header-dropdown">
+                        <li>
+                            <a title="Currency">
+                                <i class="icon icon-header icon-globe"></i>
+                                <span>Currency</span>
+                            </a>
+
+                            <ul>
+                                <li>
+                                    <a>
+                                        <i class="icon icon-dropdown icon-currency"></i>
+                                        <span>Currency</span>
+                                    </a>
+
+                                    <ul>
+                                        <li><a onclick="currency_INR()">INR</a></li>
+                                        <li><a onclick="currency_USD()">US Dollar</a></li>
+                                        <li><a onclick="currency_EUR()">Euro</a></li>
+                                        <li><a onclick="currency_GBP()">Pound</a></li>
+                                        <li><a onclick="currency_CNY()">Yuan</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+            
+                    </ul>
+                </div><!-- End .dropdowns-wrapper -->
+            </div><!-- End .dropdowns-container -->
+
+        </div><!-- End .container-fluid -->
+    </header><!-- End .header -->
+
+    <div class="main">
+        <div class="page-header">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Product Page</a></li>
+                    <li class="active">Product</li>
+                </ol>
+            </div><!-- End .container-fluid -->
+        </div><!-- End .page-header -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+
+                    <div class="product-single">
+                        <div class="row" id="show-info"> </div>
+                    </div>
+
+                    <div class="mb40"></div><!-- margin -->
+
+                    <!-- WORKING START -->
+                    <div class="tab-carousel-container" role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills nav-justified text-uppercase" role="tablist">                  
+
+              <li role="presentation">
+                <a href="#tab-details" onclick="displayReview()" aria-controls="tab-details" role="tab" data-toggle="tab">
+                  REVIEWS
+
+                </a>
+              </li>
+
+              <li role="presentation" class="active">
+                <a href="#tab-comments" aria-controls="tab-comments" role="tab" data-toggle="tab">
+                  WRITE A REVIEW
+                </a>
+              </li>
+            </ul>
+
+                        <!-- Tab Panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane" id="tab-description">
+                                <div class="product-description-section">
+
+                                </div><!-- End .product-desc-section -->
+                            </div><!-- End .tab-pane -->
+
+                            <div role="tabpanel" class="tab-pane" id="tab-details">
+                                <div class="product-details-section">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <table id="dataReview" name="dataReview"
+                                                   class="table table-bordered cart-table"></table>
+                                            <div class="comments">
+
+                                            </div><!-- End .comments -->
+                                        </div><!-- End .col-md-6 -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+
+                                            </div><!-- End .comments -->
+                                        </div><!-- End .col-md-6 -->
+                                    </div><!-- End .product-details-section -->
+                                </div><!-- End .tab-pane -->
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane active" id="tab-comments">
+                                <div class="product-comments-section">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <div class="comments">
+
+                                            </div><!-- End .comments -->
+                                        </div><!-- End .col-md-6 -->
+
+                                        <div class="col-md-6">
+                                            <h3>WRITE YOUR REVIEW</h3>
+
+                                            <!--    <form method = "POST" action="/SubmitReview">-->
+
+                                            <div class="form-group textarea-group mb35 label-overlay">
+                                                <input type="textbox" class="form-control" name="productRating"
+                                                       id="productRating" required> </input>
+                                                <label class="input-desc"><i class="icon input-icon input-message"></i>Rate
+                                                    out of 5 <span class="input-required">*</span></label>
+                                            </div><!-- End .form-group -->
+
+                                            <div class="form-group textarea-group mb35 label-overlay">
+                                                <textarea cols="30" rows="5" class="form-control -height"
+                                                          name="productReview" id="productReview" placeholder="Write your review"required></textarea>
+                                                <label class="input-desc"><span class="input-required" ></span></label>
+                                            </div><!-- End .form-group -->
+
+                                            <button type="submit" onclick="reviewSubmit()"
+                                                    class="btn btn-custom min-width">Submit Review
+                                            </button>
+                                            <!-- </form>-->
+
+                                        </div><!-- End .col-md-6 -->
+                                    </div><!-- End .row -->
+                                </div><!-- End .product-comments-section -->
+                            </div><!-- End .tab-pane -->
+
+                            <div class="mb90 mb60-sm"></div><!-- margin -->
+
+
+                            <footer class="footer footer2">
+                                <div class="footer-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="widget">
+                                                    <h4 class="widget-title">Your Profile</h4>
+                                                    <ul class="links">
+                                                        <li><a href="/MyDashboard">Dashboard</a></li>
+                                                        <li><a href="/PersonalInformation">Account</a></li>
+                                                        <li><a href="/MyOrders">Orders</a></li>
+                                                        <li><a href="/MySavedCards">Saved Cards</a></li>
+                                                    </ul>
+                                                </div><!-- End .widget -->
+                                            </div><!-- End .col-md-3 -->
+
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="widget">
+                                                    <h4 class="widget-title">Follow Us</h4>
+                
+                                                    <div class="social-icons smaller">
+                                                        <a href="#" class="social-icon icon facebook" title="Facebook"><span class="sr-only">Facebook</span></a>
+                                                        <a href="#" class="social-icon icon twitter" title="Twitter"><span class="sr-only">Twitter</span></a>
+                                                        <a href="#" class="social-icon icon instagram" title="Instagram"><span class="sr-only">Instagram</span></a>
+                                                        <a href="mailto:rateMe.16@gmail.com" class="social-icon icon email" title="Email"><span class="sr-only">Email</span></a>
+                                                    </div><!-- End .social-icons -->
+                                                </div><!-- End .widget -->
+                                            </div><!-- End .col-md-3 -->
+
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="widget">
+                                                    <h4 class="widget-title">Contact Us</h4>
+                                                    <ul class="links">
+                                                        <li><a href="/faq">FAQs</a></li>
+                                                    </ul>
+                                                </div><!-- End .widget -->
+                                            </div><!-- End .col-md-3 -->
+
+                                            <div class="col-sm-6 col-md-3">
+                                                <div class="widget newsletter-widget">
+                                                    <h4 class="widget-title">Copyright</h4>
+                                                    <p>RateMe © 2018</p>
+                                                    <p>All Rights Reserved. Except as permitted by the copyright law
+                                                        applicable to you, you may not reproduce or communicate any of
+                                                        the content on this website, including files downloadable from
+                                                        this website, without the permission of the copyright owner.</p>
+                                                </div><!-- End .widget -->
+                                            </div><!-- End .col-md-3 -->
+
+                                        </div><!-- End .row -->
+                                    </div><!-- End .container -->
+                                </div><!-- End .footer-inner -->
+
+                                <div class="footer-bottom text-center">
+                                    <div class="container">
+                                        <img src="assets/images/ffs-logo-final-footer.png" alt="RateMe"
+                                             class="footer-logo">
+                                        <div class="payment-info">
+                                            <p>Coming up</p>
+                                            <p>Easy returns. Free shipping on orders over $50</p>
+                                            <img src="assets/images/cards.png" alt="Payment methods">
+                                        </div><!-- End .payment-info -->
+
+                                    </div><!-- End .container -->
+                                </div><!-- End .footer-bottom -->
+
+                            </footer><!-- End .footer -->
+
+                        </div><!-- End /wrapper -->
+                    </div>
+                    <!-- WORKING END -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End -->
+<script src="assets/js/plugins.min.js"></script>
+<script src="assets/js/jquery.elevateZoom.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+
+    (function($) {
+        "use strict";
+
+        // Product Gallery Carousel - product.html
+        var productGalleryCarousel = new Swiper('.product-gallery-carousel', {
+            pagination: '',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            slidesPerView: 4,
+            spaceBetween: 22,
+            breakpoints: {
+                1200: {
+                    spaceBetween: 14
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 14
+                },
+                580: {
+                    slidesPerView: 3,
+                    spaceBetween: 14
+                },
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 14
+                }
+            }
+        });
+
+        if ($.fn.elevateZoom) {
+            console.log('OMG');
+            $('#product-zoom').elevateZoom({
+                responsive: true, // simple solution for zoom plugin down here // it can cause bugs at resize
+                zoomType: 'inner', // you can use 'inner' or 'window' // change inner and go to product.html page and see zoom plugin differances
+                cursor: "crosshair",
+                borderSize: 1,
+                borderColour: '#e7e7e7',
+                lensSize : 180,
+                lensBorder: 4,
+                lensOpacity: 1,
+                lensColour: 'rgba(255, 255, 255, 0.18)'
+            });
+
+            /* swap images for zoom on click event */
+            $('.product-gallery-carousel').find('a').on('click', function (e) {
+                var ez = $('#product-zoom').data('elevateZoom'),
+                        smallImg = $(this).data('image'),
+                        bigImg = $(this).data('zoom-image');
+
+                ez.swaptheimage(smallImg, bigImg);
+                e.preventDefault();
+            });
+        }
+
+    })( jQuery)
+
+
+        function zoomImage(image)
+        {
+          console.log('this is on hover');
+          $('#product-zoom').toggle("scale",{
+            percent: "200%"
+          },500);
+
+          $('#product-zoom-container').toggle("scale",{
+            percent: "200%"
+          },500);
+
+        }
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+
+<script>
+
+    var info;
+    var isbn,sellerid,bookname;
+    $(document).ready(function () {
+        /* Receiving "ISBN,SellerID" */
+        if (document.URL.indexOf('?') === -1) {
+            alert("No product found! Select a product from the home page");
+            window.location.href = "/";
+        }
+        else {
+            var pos = document.URL.indexOf('?id=');
+            console.log(pos);
+            if (pos !== -1) {
+                info = document.URL.substring(pos + 4).split(',');
+                console.log(info[0], info[1],info[2]);
+            }
+        }
+      /*Received "ISBN,SellerID" in "info[0],info[1]" */
+
+
+         $("#logout").hide();
+         $("#login").show();
+
+         var request = $.ajax({
+         url:  "/checkuserlogin",
+         type: "GET",
+         success: function(result) {
+         console.log('user is logged in' + result);
+         if(result=='true')
+         {
+         $("#logout").show
+         $("#login").hide();
+         }
+         }
+         });
+
+        if(info[2]=="0") {
+            var request = $.ajax({
+                url: "/bookInfo",
+                type: "POST",
+                data: {
+                    isbn: info[0],
+                    sellerID: info[1]
+                },
+                success: function (data) {
+                    var r = new Array(), j = -1;
+                    var jsonData = JSON.parse(data);
+                    for (var i = 0; i < jsonData.length; i++) {
+                        //var counter = jsonData[i];
+                        //console.log(counter);
+                        //var counter = jsonData[i];
+                        console.log(jsonData[i]);
+                        isbn = jsonData[i].isbn;
+                        bookname = jsonData[i].bookName;
+                        sellerid = jsonData[i].sellerID;
+                        //console.log(counter);
+                        r[++j] = '<div class="col-sm-7">';
+                        r[++j] = '<div class="product-gallery-container">';
+                        r[++j] = '<div class="product-zoom-wrapper">';
+                        //r[++j] ='<span class="product-label discount">-25%</span>';
+                        r[++j] = '<div class="product-zoom-container">';
+                        //r[++j] ='<a data-image="'+jsonData[i].source+'" data-zoom-image="/../productImages/750.jpg" class="product-gallery-item">';
+                        //r[++j] ='<img src="'+jsonData[i].source+'" alt="product-small-1">';
+                        //r[++j] ='</a>';
+                        r[++j] = '<img id="product-zoom" src="' + jsonData[i].source + '" data-zoom-image="/../productImages/750.jpg" alt="Product image big">';
+                        r[++j] = '</div>';
+                        r[++j] = '<i class="btn-quickview zoom-icon icon"></i>';
+                        r[++j] = '</div>';
+                        r[++j] = '<div class="swiper-container product-gallery-carousel vertical-center-nav">';
+                        r[++j] = '<div class="swiper-button-prev icon dark"></div>';
+                        r[++j] = '<div class="swiper-button-next icon dark"></div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+
+                        r[++j] = '<div class="col-sm-5">';
+                        r[++j] = '<div class="product-details">';
+                        r[++j] = '<div class="product-brand">';
+                        r[++j] = jsonData[i].author;
+                        r[++j] = '</div>';
+
+                        r[++j] = '<h2 class="product-title">';
+                        r[++j] = jsonData[i].bookName;
+                        r[++j] = '</h2>';
+
+                        r[++j] = '<ul class="product-details-list">';
+                        r[++j] = '<li>';
+                        r[++j] = jsonData[i].description;
+                        r[++j] = '</li>';
+                        r[++j] = '</ul>';
+
+                        r[++j] = '<div class="product-ratings-wrapper">';
+
+                        r[++j] = '<div class="product-ratings-desc">';
+                        r[++j] = '<a href="/tab-comments">Write a review</a>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+
+                        r[++j] = '<div class="product-details-box">';
+                        r[++j] = '<div class="product-price-container">';
+                        r[++j] = '<label>You Pay:</label>';
+                        r[++j] = '<span class="product-price">$' + jsonData[i].price + '</span>';
+                        r[++j] = '</div>';
+                        // <!--<form method = "POST" action="/Addtocart WORKING-->
+                        r[++j] = '<div class="product-action-wrapper">';
+                        r[++j] = '<div class="product-quantity">';
+                        r[++j] = '<input type="text" class="form-control" value="1" name="productQuantity" id="productQuantity" required>';
+                        r[++j] = '</div>';                        
+                        r[++j] = '</div>';
+                        //<!-- </form> -->
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                    }
+                    $("#show-info").html(r.join(''));
+                }
+            });
+        }
+        else if(info[2] == "1") {
+            var request = $.ajax({
+                url: "/notesInfo",
+                type: "POST",
+                data: {
+                    classnotesId: info[0],
+                    sellerID: info[1]
+                },
+                success: function (data) {
+                    var r = new Array(), j = -1;
+                    var jsonData = JSON.parse(data);
+                    for (var i = 0; i < jsonData.length; i++) {
+                        //var counter = jsonData[i];
+                        //console.log(counter);
+                        //var counter = jsonData[i];
+                        console.log(jsonData[i]);
+                        //console.log(counter);
+                        r[++j] = '<div class="col-sm-7">';
+                        r[++j] = '<div class="product-gallery-container">';
+                        r[++j] = '<div class="product-zoom-wrapper">';
+                        //r[++j] ='<span class="product-label discount">-25%</span>';
+                        r[++j] = '<div class="product-zoom-container">';
+                        //r[++j] ='<a data-image="'+jsonData[i].source+'" data-zoom-image="/../productImages/750.jpg" class="product-gallery-item">';
+                        //r[++j] ='<img src="'+jsonData[i].source+'" alt="product-small-1">';
+                        //r[++j] ='</a>';
+                        r[++j] = '<img id="product-zoom" src="/../productImages/'+jsonData[i].classnotesId+'.jpg" data-zoom-image="/../productImages/'+jsonData[i].classnotesId+'.jpg" alt="Product image big">';
+                        r[++j] = '</div>';
+                        r[++j] = '<i class="btn-quickview zoom-icon icon"></i>';
+                        r[++j] = '</div>';
+                        r[++j] = '<div class="swiper-container product-gallery-carousel vertical-center-nav">';
+                        r[++j] = '<div class="swiper-button-prev icon dark"></div>';
+                        r[++j] = '<div class="swiper-button-next icon dark"></div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+
+                        r[++j] = '<div class="col-sm-5">';
+                        r[++j] = '<div class="product-details">';
+                        r[++j] = '<div class="product-brand">';
+                        r[++j] = jsonData[i].university;
+                        r[++j] = '</div>';
+
+                        r[++j] = '<h2 class="product-title">';
+                        r[++j] = jsonData[i].classNotesName;
+                        r[++j] = '</h2>';
+
+                        r[++j] = '<ul class="product-details-list">';
+                        r[++j] = '<li>';
+                        r[++j] = jsonData[i].description;
+                        r[++j] = '</li>';
+                        r[++j] = '</ul>';
+
+                        r[++j] = '<div class="product-ratings-wrapper">';
+
+                        r[++j] = '<div class="product-ratings-desc">';
+                        r[++j] = '<a href="/tab-comments">Write a review</a>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+
+                        r[++j] = '<div class="product-details-box">';
+                        r[++j] = '<div class="product-price-container">';
+                        r[++j] = '<label>You Pay:</label>';
+                        r[++j] = '<span class="product-price">$' + jsonData[i].price + '</span>';
+                        r[++j] = '</div>';
+                        
+                        r[++j] = '<div class="product-action-wrapper">';
+                        r[++j] = '<div class="product-quantity">';
+                        r[++j] = '<input type="text" class="form-control" value="1" name="productQuantity" id="productQuantity" required>';
+                        r[++j] = '</div>';
+                        r[++j] = '<div class="product-action">';
+                        r[++j] = '<button id="addClick" title="Add to Cart" onclick="addToCart()" class="btn-add-cart custom2"><i class="icon icon-cart"></i>Add To Cart </button>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';                        
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                        r[++j] = '</div>';
+                    }
+                    $("#show-info").html(r.join(''));
+                }
+            });
+        }
+
+        var request = $.ajax({
+            url: "/bookReview",
+            type: "POST",
+            data: {
+                bookIsbn: info[0]
+            },
+            success: function (result) {
+                // var bookDetails = JSON.parse(data);
+                console.log(result);
+                var r = new Array(), j = -1;
+                var jsonData = JSON.parse(result);
+                r[++j] = '<tr>';
+                r[++j] = '<th style="text-align:center">Rating</th>';
+                r[++j] = '<th style="text-align:center">Review</th>';
+                r[++j] = '</tr>';
+                for (var i = 0; i < jsonData.length; i++) {
+                    r[++j] = '<tr><td>';
+                    r[++j] = jsonData[i].productRating;
+                    r[++j] = '</td><td>';
+                    r[++j] = jsonData[i].productReview;
+                    r[++j] = '</td></tr>';
+                }
+                $('#dataReview').html(r.join(''));
+            }
+        });// rend request
+
+    });
+
+    function reviewSubmit() {
+        console.log("Checking reviewSubmit");
+        console.log($("#productReview").val()+'This is review');
+            console.log($("#productRating").val()+'This is review');
+        var request = $.ajax({
+            url: "/SubmitReview",
+            type: "POST",
+            data: {
+                productReview: $("#productReview").val(),
+                productRating: $("#productRating").val(),
+                bookIsbn: isbn,
+                bookName: bookname
+            },
+            success: function (result) {
+                 if(result=='notloggedin'){
+                    alert("Please log in");
+                 }
+                 else {
+                    alert("Review Submitted");
+                    window.location.href = "/Product?id="+info[0]+","+info[1];
+                 }
+            }
+        });
+    }
+
+    function displayReview()
+    {
+      console.log('in display review');
+      var request = $.ajax({
+          url: "/bookReview",
+          type: "POST",
+          data: {
+              bookIsbn: isbn
+          },
+          success: function (result) {
+              // var bookDetails = JSON.parse(data);
+              console.log(result);
+              var r = new Array(), j = -1;
+              var jsonData = JSON.parse(result);
+              r[++j] = '<tr>';
+              r[++j] = '<th style="text-align:center">Rating</th>';
+              r[++j] = '<th style="text-align:center">Review</th>';
+              r[++j] = '</tr>';
+              for (var i = 0; i < jsonData.length; i++) {
+                  r[++j] = '<tr><td>';
+                  r[++j] = jsonData[i].productRating;
+                  r[++j] = '</td><td>';
+                  r[++j] = jsonData[i].productReview;
+                  r[++j] = '</td></tr>';
+              }
+              $('#dataReview').html(r.join(''));
+          }
+      });// rend request
+    }
+
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+
+</body>
+</html>

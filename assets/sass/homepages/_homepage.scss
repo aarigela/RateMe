@@ -1,0 +1,420 @@
+// Homepage  - Index.html
+.widget {
+	.product.product2 {
+		position: relative;
+		padding: 15px;
+		margin-bottom:0;
+
+		&:hover,
+		&:focus {
+			padding-bottom:15px;
+			margin-bottom:0;
+
+			.product-meta {
+				margin-top:0;
+			}
+		}
+
+		.product-countdown {
+			.countdown-section {
+				padding-top:13px;
+				padding-bottom: 12px;
+			}
+			.countdown-amount {
+				font-size:20px;
+			}
+		}
+	}
+}
+
+.dealoftheday-carousel.v2 {
+	.swiper-slide {
+		@media (min-width: 600px) {
+			width: 50%;
+		}
+
+		@media (min-width: 1200px) {
+			width: 26.15%;
+		}
+
+		&.double {
+			@media (min-width: 600px) {
+				width: 50%;
+			}
+
+			@media (min-width: 1200px) {
+				width: 47.7%;
+			}
+		}
+	}
+
+	.product.product2:not(.wide) {
+		margin-bottom:30px;
+		padding-bottom:17px;
+
+		.product-brand {
+			margin-bottom:10px;
+		}
+
+		.product-title {
+			letter-spacing:0.05em;
+			max-width:none;
+			margin-bottom:7px;
+		}
+
+		.product-colors {
+			margin-bottom:12px;
+		}
+
+		&:hover,
+		&:focus {
+			margin-bottom:7px;
+			padding-bottom:70px;
+
+			.product-meta {
+				margin-top: -30px;
+			}
+		}
+	}
+}
+
+.product.product2.wide {
+	margin-bottom:30px;
+	padding-bottom: 40px;
+
+	&:hover,
+	&:focus {
+		margin-bottom:10px;
+		padding-bottom:90px;
+
+		.product-meta {
+			margin-top: -30px;
+		}
+	}
+
+	.product-top {
+		@media (min-width: 992px) {
+			margin-bottom: 25px;
+		}
+
+		@media (min-width: 1200px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	.product-title {
+		letter-spacing:0.05em;
+		max-width: none;
+		@media (min-width: 768px) {
+			font-size:16px;
+		}
+
+		@media (min-width: 992px) {
+			font-size:17px;
+			margin-bottom: 12px;
+		}
+
+		@media (min-width: 1600px) {
+			margin-bottom: 15px;
+		}
+	}
+
+	.product-brand {
+		@media (min-width: 992px) {
+			font-size:18px;
+		}
+	}
+
+	.product-price-container {
+		margin-bottom:20px;
+
+		@media (min-width: 1600px) {
+			margin-bottom:36px;
+		}
+
+		.product-old-price,
+		.product-price {
+			@media (min-width: 992px) {
+				font-size:18px;
+			}
+		}
+	}
+
+	.product-countdown {
+		max-width: 440px;
+		margin:0 auto;
+
+		.countdown-section {
+			padding-top:16px;
+			padding-bottom:16px;
+
+			.countdown-amount {
+				font-size:25px;
+			}
+
+			.countdown-period {
+				font-size: 11px;
+				margin-top:3px;
+			}
+		}
+	}
+}
+
+.banner.newsletter-banner {
+	margin-bottom:70px;
+
+	@media (min-width: 768px) {
+		margin-bottom:85px;
+	}
+
+	@media (min-width: 1200px) {
+		margin-bottom:97px;
+	}
+
+	@media (max-width: 767px) {
+		height:240px;
+	}
+
+	img {
+		@media (max-width: 767px) {
+			width:auto;
+			height:100%;
+		}
+	}
+
+	.banner-content {
+		@media (max-width: 767px) {
+			display:inline-block;
+			width: auto;
+		}
+		
+		@media (max-width: 600px) {
+			left:20px;
+			right:20px;
+			transform: translateX(0) translateY(-50%);
+		}
+	}
+
+	p {
+		max-width: 400px;
+		margin: 0 auto 20px;
+		line-height:1.35;
+		white-space:normal;
+		display:none;
+		color: #555;
+
+		@media (min-width: 768px) {
+			display:block;
+			font-size:17px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size:17px;
+			margin-bottom:20px;
+		}
+
+		@media (min-width: 1600px) {
+			max-width: 460px;
+			font-size:19px;
+			margin-bottom:30px;
+		}
+	}
+
+	h4 {
+		color: #535353;
+		font-size:13px;
+		letter-spacing: 0.05em;
+		margin-bottom:15px;
+
+		@media (min-width: 768px) {
+			font-size:15px;
+			margin-bottom:10px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size:17px;
+			margin-bottom:20px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size:20px;
+			margin-bottom:36px;
+		}
+	}
+
+	h3 {
+		color: #484848;
+		font-size:32px;
+		letter-spacing: 0.05em;
+		margin-bottom:14px;
+
+		@media (min-width: 768px) {
+			font-size:48px;
+			margin-bottom:8px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size:60px;
+			margin-bottom:12px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size:70px;
+			margin-bottom:24px;
+		}
+	}
+	form {
+		width:100%;
+		margin: 0 auto;
+		position: relative;
+
+		@media (min-width: 480px) {
+			max-width: 420px;
+		}
+
+		@media (min-width: 992px) {
+			max-width: 460px;
+		}
+	}
+	
+
+	.form-control {
+		border:none;
+		height:43px;
+		font:400 16px/1.8 $second-font-family;
+		padding: 8px 130px 7px 20px;
+		background-color: #fff;
+		color:#555555;
+		border-radius: 20px;
+		margin-bottom:0;
+
+		@media (min-width: 992px) {
+			font-size:17px;
+			height:46px;
+			padding: 9px 150px 7px 30px;
+		}
+
+		&::placeholder {
+			color: #555555;
+		}
+		
+		&:hover,
+		&:focus {
+			background-color: #fff;
+		}
+	}
+
+	.btn {
+		position: absolute;
+		right:0;
+		top:0;
+		font-weight:600;
+		font-size:15px;
+		font-family:$second-font-family;
+		text-transform: uppercase;
+		min-width: 110px;
+		text-align:center;
+		border-radius: 20px;
+		padding:11.5px 10px 8.5px;
+
+		@media (min-width: 992px) {
+			min-width: 120px;
+			font-size:16px;
+			padding:12px 10px 10px;
+		}
+
+		&:hover,
+		&:focus {
+			border-radius:0;
+		}
+	}
+
+	form.larger {
+		max-width: 440px;
+		margin: 0 auto;
+		position: relative;
+
+		@media (min-width: 768px) {
+			max-width: 540px;
+		}
+
+		@media (min-width: 992px) {
+			max-width: 620px;
+		}
+		
+		.form-control {
+			height:43px;
+			font:400 16px/1.8 $second-font-family;
+			padding: 8px 130px 7px 20px;
+			border-radius: 30px;
+			margin-bottom:0;
+
+			@media (min-width: 768px) {
+				font-size:18px;
+				height:50px;
+				padding: 9px 165px 9px 25px;
+			}
+
+
+			@media (min-width: 992px) {
+				font-size:20px;
+				height:56px;
+				padding: 10px 190px 10px 30px;
+			}
+		}
+
+		.btn {
+			font-size:14px;
+			min-width: 110px;
+			border-radius: 30px;
+			padding:12px 10px 9px;
+
+			@media (min-width: 768px) {
+				min-width: 140px;
+				font-size:16px;
+				padding:14px 10px 12px;
+			}
+
+			@media (min-width: 992px) {
+				min-width: 160px;
+				font-size:18px;
+				padding:16px 10px 13px;
+			}
+
+			&.btn-link-icon {
+				padding:0 10px;
+				min-width:83px;
+				background-color: transparent;
+				line-height:0;
+
+				@media (min-width: 768px) {
+					padding-top:3.5px;
+					padding-bottom:3.5px;
+				}
+
+				@media (min-width: 992px) {
+					padding-top: 6.5px;
+					padding-bottom: 6.5px;
+				}
+
+				.icon-btn-arrow {
+					display: inline-block;
+					width: 43px;
+					height: 43px;
+					@include sprite-position($icon-btn-arrow);	
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $first-color;
+					border-color: $first-color;
+					border-radius: 28px !important;
+
+					.icon-btn-arrow {
+						@include sprite-position($icon-btn-arrow-white);	
+					}
+				}
+			}
+		}
+	}
+}
